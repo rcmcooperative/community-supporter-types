@@ -1,6 +1,6 @@
 # Template for setting up RCM Cooperative partner repositories
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## About this Repository
@@ -91,6 +91,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eleanor-broadway"><img src="https://avatars.githubusercontent.com/u/52749246?v=4?s=100" width="100px;" alt="eleanor-broadway"/><br /><sub><b>eleanor-broadway</b></sub></a><br /><a href="#doc-eleanor-broadway" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hjrucl90"><img src="https://avatars.githubusercontent.com/u/185346822?v=4?s=100" width="100px;" alt="Hollie Rowland"/><br /><sub><b>Hollie Rowland</b></sub></a><br /><a href="#doc-hjrucl90" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://erambler.co.uk/"><img src="https://avatars.githubusercontent.com/u/457628?v=4?s=100" width="100px;" alt="Jez Cope"/><br /><sub><b>Jez Cope</b></sub></a><br /><a href="#doc-jezcope" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://malvikasharan.github.io/"><img src="https://avatars.githubusercontent.com/u/5370471?v=4?s=100" width="100px;" alt="Malvika Sharan"/><br /><sub><b>Malvika Sharan</b></sub></a><br /><a href="#doc-malvikasharan" title="Documentation">📖</a> <a href="#content-malvikasharan" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
