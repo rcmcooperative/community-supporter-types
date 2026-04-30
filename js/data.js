@@ -118,11 +118,11 @@ const phases = [
 const profiles = [
   {
     id: 'creative',
-    name: 'Influencer',
-    emoji: '🎨',
+    name: 'Influencer Cook',
+    emoji: '📢',
     color: '#c4532a',
-    tagline: 'You make things. Your mind sees possibilities others miss.',
-    summary: 'You think visually, feel deeply, and have a relentless drive to make things that didn\'t exist before. Your superpower is original thinking — whether in writing, design, music, art, video, or any craft. The world needs what lives in your imagination.',
+    tagline: 'Core skill: Communication',
+    summary: 'You craft stories, amplify voices, and make sure the right messages reach the right people at the right time. Your superpower is turning complex ideas into compelling content that moves communities to action. Congratulations! You are a Research Community Manager.',
     strengths: ['Original, out-of-the-box thinking', 'Deep aesthetic sensibility', 'Emotional intelligence in work', 'Can see the big picture others miss'],
     weaknesses: ['Can struggle with routine and deadlines', 'Perfectionism can slow output', 'Business/financial side feels draining', 'Hard to "switch off" your mind'],
     paths: [
@@ -133,11 +133,11 @@ const profiles = [
   },
   {
     id: 'intellectual',
-    name: 'The Thinker',
-    emoji: '🧠',
+    name: 'Community Cook',
+    emoji: '🤝',
     color: '#2a7ac4',
-    tagline: 'You go deep. Ideas, knowledge, and understanding are your oxygen.',
-    summary: 'You\'re energised by learning, complexity, and making sense of the world. You read widely, think rigorously, and have little patience for shallow answers. Your power is your mind — and the paths that let you use it fully will feel like breathing.',
+    tagline: 'Core skill: Enaggement',
+    summary: 'You bring people together, spark connections, and make sure everyone has a seat at the table. Your superpower is building belonging and creating spaces where communities genuinely thrive. Congratulations! You are a Research Community Manager.',
     strengths: ['Deep analytical and research ability', 'Highly knowledgeable and well-read', 'Excellent at breaking down complex problems', 'Can explain difficult things clearly'],
     weaknesses: ['Overthinking can lead to inaction', 'Can underestimate emotional/people dimensions', 'May be impatient with "simple" thinking', 'Analysis paralysis is a real risk'],
     paths: [
@@ -148,11 +148,11 @@ const profiles = [
   },
   {
     id: 'helper',
-    name: 'The Giver',
-    emoji: '🤝',
+    name: 'Head Chef',
+    emoji: '🧠',
     color: '#2ac47a',
-    tagline: 'You care deeply. People feel better after talking to you.',
-    summary: 'Your strength is people. You\'re a natural listener, an empathetic presence, and someone who genuinely wants others to thrive. You feel most alive when your work makes a tangible difference in someone\'s life — not just a bottom line.',
+    tagline: 'Core skill: Strategic',
+    summary: 'You are helping to articulate the community\'s priorities, identify areas for growth or collaboration, and building collaborations with other communities. You advocate for your community to people outside of it and advocate for new leaders within in. Congratulations! You are a Research Community Manager.',
     strengths: ['Exceptional empathy and emotional awareness', 'Natural communicator and listener', 'Builds deep trust quickly', 'Motivated by meaning, not just money'],
     weaknesses: ['Can absorb others\' problems and burn out', 'Struggles to say no or set boundaries', 'May undervalue your own needs', 'Can be taken advantage of'],
     paths: [
@@ -163,11 +163,11 @@ const profiles = [
   },
   {
     id: 'leader',
-    name: 'The Leader',
-    emoji: '🦁',
+    name: 'Hostess with the Mostest',
+    emoji: '📋',
     color: '#c49a2a',
-    tagline: 'You move people. You see what needs to happen — and you make it happen.',
-    summary: 'You\'re energised by influence, direction, and results. People follow you naturally because you bring clarity in chaos. You\'re at your best when you\'re owning a vision, making decisions, and driving a team or organisation toward something meaningful.',
+    tagline: 'Core skill: Accountability',
+    summary: 'You keep everything running smoothly, timelines, budgets, action items, nothing slips through. Your superpower is turning good intentions into reliable, trackable outcomes. Congratulations! You are a Research Community Manager.',
     strengths: ['Natural ability to organise and motivate others', 'Clear decisiveness under pressure', 'Big picture thinker who can delegate', 'High drive and execution energy'],
     weaknesses: ['Can steamroll others\' input if not careful', 'Impatience with slow or "soft" progress', 'Risk of burnout from always being "on"', 'Delegating — and truly letting go — is hard'],
     paths: [
@@ -178,11 +178,11 @@ const profiles = [
   },
   {
     id: 'builder',
-    name: 'The Builder',
-    emoji: '🔧',
+    name: 'Nerd Cook',
+    emoji: '💻',
     color: '#8a4ac4',
-    tagline: 'You make things work. You\'re the person who actually gets it done.',
-    summary: 'You\'re wired for execution. While others theorise, you build. You\'re happiest when your hands (or mind) are on something real — writing code, fixing systems, making products, constructing things. You measure success by what exists that didn\'t exist before.',
+    tagline: 'Core skill: Technical',
+    summary: 'You love the tools, the code, and the infrastructure that makes open research possible. Your superpower is embedding reproducible, ethical, and open practices into everything you touch. Congratulations! You are a Research Community Manager.',
     strengths: ['High execution ability — you finish what you start', 'Strong technical aptitude and problem-solving', 'Practical, resourceful, and self-reliant', 'Great at learning on the job'],
     weaknesses: ['May under-communicate your work to others', 'Can get lost in the details and miss the big picture', 'Networking and self-promotion don\'t come naturally', 'May undervalue the "soft" skills needed to advance'],
     paths: [
@@ -193,11 +193,11 @@ const profiles = [
   },
   {
     id: 'organiser',
-    name: 'The Operator',
-    emoji: '🗂️',
+    name: 'Community Members',
+    emoji: '',
     color: '#c4532a',
-    tagline: 'You bring order. Where others see chaos, you see a system waiting to happen.',
-    summary: 'You\'re the backbone of every team you join. You see inefficiency and it bothers you. You\'re excellent at planning, coordinating, and making sure things actually happen. The world massively undervalues people like you — but the best organisations don\'t.',
+    tagline: '',
+    summary: 'Yay!!! You belong to a community!',
     strengths: ['Exceptional at planning and systems thinking', 'Reliable, thorough, and detail-oriented', 'Calm under pressure and logistically sharp', 'Can manage multiple things at once without dropping any'],
     weaknesses: ['Can be resistant to sudden change or ambiguity', 'May undervalue creative or "soft" contributions', 'Risk of micromanaging or being too rigid', 'Can struggle to delegate — feels faster to do it yourself'],
     paths: [
