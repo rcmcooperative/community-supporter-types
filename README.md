@@ -1,6 +1,6 @@
 # What type of community supporter are you
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This repository houses the code, persona logic, and documentation for the **Community Supporter Type Quiz**, a project developed during the **[CW26 Hack Day 2026](https://www.software.ac.uk/workshop/collaborations-workshop-2026-cw26)**.
@@ -70,6 +70,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Maryblessing"><img src="https://avatars.githubusercontent.com/u/79088348?v=4?s=100" width="100px;" alt="Maryblessing O."/><br /><sub><b>Maryblessing O.</b></sub></a><br /><a href="#doc-Maryblessing" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mdonnay-ssi"><img src="https://avatars.githubusercontent.com/u/214476088?v=4?s=100" width="100px;" alt="Michael Donnay"/><br /><sub><b>Michael Donnay</b></sub></a><br /><a href="#doc-mdonnay-ssi" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://rgaiacs.com"><img src="https://avatars.githubusercontent.com/u/1506457?v=4?s=100" width="100px;" alt="Raniere Silva"/><br /><sub><b>Raniere Silva</b></sub></a><br /><a href="#doc-rgaiacs" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/salmathalji"><img src="https://avatars.githubusercontent.com/u/56680865?v=4?s=100" width="100px;" alt="Salma Thalji"/><br /><sub><b>Salma Thalji</b></sub></a><br /><a href="#doc-salmathalji" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
