@@ -1,10 +1,1259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Compass — Discover Your Direction</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #faf7f2;
+  --warm: #f5ede0;
+  --paper: #ede8df;
+  --ink: #1a1208;
+  --ink2: #3d3320;
+  --muted: #8a7d68;
+  --accent: #c4532a;
+  --accent2: #2a7ac4;
+  --accent3: #2ac47a;
+  --gold: #c49a2a;
+  --border: rgba(26,18,8,0.12);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Paper texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Decorative corner marks */
+.corner-mark {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+.corner-mark.tl { top: 20px; left: 20px; border-top: 2px solid var(--ink); border-left: 2px solid var(--ink); }
+.corner-mark.tr { top: 20px; right: 20px; border-top: 2px solid var(--ink); border-right: 2px solid var(--ink); }
+.corner-mark.bl { bottom: 20px; left: 20px; border-bottom: 2px solid var(--ink); border-left: 2px solid var(--ink); }
+.corner-mark.br { bottom: 20px; right: 20px; border-bottom: 2px solid var(--ink); border-right: 2px solid var(--ink); }
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 24px 100px;
+}
+
+/* ── INTRO ── */
+.intro-screen { animation: rise 0.8s cubic-bezier(0.16,1,0.3,1) both; }
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.eyebrow-line { flex: 1; height: 1px; background: var(--border); }
+
+.eyebrow-text {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.intro-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.intro-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.intro-subtitle {
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 24px 0 40px;
+}
+
+.intro-subtitle strong { color: var(--ink2); font-weight: 500; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 36px 0;
+}
+.divider-line { flex: 1; height: 1px; background: var(--border); }
+.divider-diamond {
+  width: 8px; height: 8px;
+  background: var(--accent);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pillar {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pillar-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.pillar-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--ink2);
+  margin-bottom: 3px;
+}
+
+.pillar-desc {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--ink);
+  color: var(--cream);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 18px 36px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.3px;
+}
+
+.start-btn:hover {
+  background: var(--ink2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(26,18,8,0.18);
+}
+
+.start-btn .arrow {
+  width: 28px; height: 28px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  transition: transform 0.2s;
+}
+
+.start-btn:hover .arrow { transform: translateX(3px); }
+
+.time-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── QUIZ ── */
+.quiz-screen { display: none; }
+
+.progress-bar-wrap {
+  margin-bottom: 44px;
+}
+
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.progress-phase {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.progress-frac {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.progress-frac span { color: var(--muted); font-size: 1rem; }
+
+.bar-track {
+  height: 2px;
+  background: var(--border);
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--ink);
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+}
+
+.bar-fill::after {
+  content: '';
+  position: absolute;
+  right: -4px; top: -3px;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* Question */
+.q-card {
+  animation: rise 0.45s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+.q-category {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  margin-bottom: 16px;
+}
+
+.q-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.options-list { display: flex; flex-direction: column; gap: 10px; }
+
+.opt-btn {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.opt-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+  z-index: 0;
+}
+
+.opt-btn:hover::before { transform: scaleX(0.04); }
+.opt-btn.selected::before { transform: scaleX(1); }
+
+.opt-btn > * { position: relative; z-index: 1; }
+
+.opt-btn:hover {
+  border-color: var(--ink2);
+  transform: translateX(3px);
+}
+
+.opt-btn.selected {
+  border-color: var(--ink);
+  color: var(--cream);
+}
+
+.opt-letter {
+  width: 30px; height: 30px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.2s;
+  background: var(--cream);
+}
+
+.opt-btn.selected .opt-letter {
+  border-color: var(--cream);
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.opt-body { flex: 1; }
+
+.opt-main {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 3px;
+  transition: color 0.2s;
+}
+
+.opt-btn.selected .opt-main { color: var(--cream); }
+
+.opt-sub {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+.opt-btn.selected .opt-sub { color: rgba(250,247,242,0.65); }
+
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.btn-back {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--muted);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-back:hover { border-color: var(--ink2); color: var(--ink); }
+.btn-back:disabled { opacity: 0.25; cursor: not-allowed; }
+
+.btn-next {
+  background: var(--ink);
+  color: var(--cream);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 30px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-next:hover {
+  background: var(--ink2);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(26,18,8,0.15);
+}
+
+.btn-next:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── RESULTS ── */
+.results-screen { display: none; }
+
+.results-screen.active { display: block; animation: rise 0.7s cubic-bezier(0.16,1,0.3,1) both; }
+
+.result-masthead {
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.result-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.result-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5.5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.result-headline em { font-style: italic; color: var(--accent); }
+
+.result-summary {
+  font-size: 1rem;
+  color: var(--ink2);
+  font-weight: 300;
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+/* Strengths/Weaknesses */
+.sw-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.sw-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.sw-card.strengths { border-top: 3px solid var(--accent3); }
+.sw-card.weaknesses { border-top: 3px solid var(--accent); }
+
+.sw-head {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.sw-card.strengths .sw-head { color: #1a8a56; }
+.sw-card.weaknesses .sw-head { color: var(--accent); }
+
+.sw-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 13.5px;
+  color: var(--ink2);
+  line-height: 1.45;
+}
+
+.sw-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.strengths .sw-dot { background: var(--accent3); }
+.weaknesses .sw-dot { background: var(--accent); }
+
+/* Score bars */
+.profile-section {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+.score-row { margin-bottom: 18px; }
+.score-row:last-child { margin-bottom: 0; }
+
+.score-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.score-name-wrap { display: flex; align-items: center; gap: 8px; }
+
+.score-emoji { font-size: 1.1rem; }
+
+.score-name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--ink2);
+}
+
+.score-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.score-track {
+  height: 5px;
+  background: var(--paper);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.score-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+  width: 0%;
+}
+
+/* Path cards */
+.paths-grid { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+
+.path-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.path-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(26,18,8,0.08);
+}
+
+.path-card.rank-1 {
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.path-rank {
+  position: absolute;
+  top: 20px; right: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--border);
+  line-height: 1;
+}
+
+.path-card.rank-1 .path-rank { color: rgba(255,255,255,0.08); }
+
+.path-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+
+.path-icon-wrap {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  background: var(--paper);
+  flex-shrink: 0;
+}
+
+.path-card.rank-1 .path-icon-wrap { background: rgba(255,255,255,0.1); }
+
+.path-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.path-card.rank-1 .path-title { color: var(--cream); }
+
+.path-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.path-card.rank-1 .path-desc { color: rgba(250,247,242,0.55); }
+
+.path-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.action-chip {
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  color: var(--ink2);
+  background: var(--cream);
+}
+
+.path-card.rank-1 .action-chip {
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(250,247,242,0.8);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Note */
+.closing-note {
+  background: var(--warm);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.closing-note p {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.closing-note strong { font-weight: 600; color: var(--ink); }
+
+.restart-btn {
+  width: 100%;
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--muted);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.restart-btn:hover { border-color: var(--ink2); color: var(--ink); }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden { display: none !important; }
+
+@media (max-width: 520px) {
+  .pillars { grid-template-columns: 1fr; }
+  .sw-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
 <body>
 
-<h1>Community Supporter Types</h1>
-<p>What cook are you?</p>
+<div class="corner-mark tl"></div>
+<div class="corner-mark tr"></div>
+<div class="corner-mark bl"></div>
+<div class="corner-mark br"></div>
 
+<div class="wrap">
+
+  <!-- ══ INTRO ══ -->
+  <div class="intro-screen" id="intro">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Life Compass</span>
+      <div class="eyebrow-line"></div>
+    </div>
+
+    <h1 class="intro-title">Find where<br>you <em>belong.</em></h1>
+
+    <p class="intro-subtitle">
+      Feeling stuck, lost, or unsure what to do with your life? <strong>You're not alone.</strong>
+      This quiz helps you discover your natural strengths, what drains you, and which life paths genuinely fit <em>you</em> — not someone else's idea of success.
+    </p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-icon">🧭</span>
+        <div>
+          <div class="pillar-label">Discover Direction</div>
+          <div class="pillar-desc">Find what genuinely excites and drives you</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🪞</span>
+        <div>
+          <div class="pillar-label">Know Yourself</div>
+          <div class="pillar-desc">Honest picture of your strengths & blind spots</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🗺️</span>
+        <div>
+          <div class="pillar-label">Real Paths</div>
+          <div class="pillar-desc">Practical directions tailored to your profile</div>
+        </div>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🌍</span>
+        <div>
+          <div class="pillar-label">For Everyone</div>
+          <div class="pillar-desc">Student, professional, or starting over</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+
+    <button class="start-btn" onclick="startQuiz()">
+      Begin the Journey
+      <span class="arrow">→</span>
+    </button>
+    <div class="time-note">⏱ 15 questions &nbsp;·&nbsp; ~4 minutes &nbsp;·&nbsp; No sign-up needed</div>
+  </div>
+
+  <!-- ══ QUIZ ══ -->
+  <div class="quiz-screen" id="quiz">
+    <div class="progress-bar-wrap">
+      <div class="progress-top">
+        <span class="progress-phase" id="phase-label">Getting to Know You</span>
+        <span class="progress-frac"><span id="qnum">1</span><span> / 15</span></span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="bar-fill" style="width:6.66%"></div>
+      </div>
+    </div>
+
+    <div class="q-card" id="q-card">
+      <div class="q-category" id="q-category"></div>
+      <div class="q-text" id="q-text"></div>
+      <div class="options-list" id="options-list"></div>
+    </div>
+
+    <div class="nav-row">
+      <button class="btn-back" id="btn-back" onclick="goBack()" disabled>← Back</button>
+      <button class="btn-next" id="btn-next" onclick="goNext()" disabled>Continue <span>→</span></button>
+    </div>
+  </div>
+
+  <!-- ══ RESULTS ══ -->
+  <div class="results-screen" id="results"></div>
+
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────
+
+const questions = [
+  {
+    category: "Your Natural Energy",
+    text: "At the end of a long day, what kind of work leaves you feeling tired but still satisfied?",
+    options: [
+      { main: "Working with people — listening, helping, or leading them", sub: "Conversations, coaching, teamwork", cats: { people: 3, helping: 2, leadership: 1 } },
+      { main: "Working with ideas — reading, writing, analysing", sub: "Research, strategy, thinking through problems", cats: { intellectual: 3, creative: 1, analytical: 2 } },
+      { main: "Making things — building, designing, or fixing", sub: "Crafts, code, products, physical work", cats: { maker: 3, creative: 2, technical: 2 } },
+      { main: "Organising and executing — planning, managing, getting things done", sub: "Systems, schedules, results", cats: { organiser: 3, leadership: 2, structured: 2 } }
+    ]
+  },
+  {
+    category: "How You Think",
+    text: "A friend has a big problem. What do you instinctively do first?",
+    options: [
+      { main: "Listen fully before saying anything", sub: "You care about making them feel heard", cats: { people: 3, helping: 3, emotional: 2 } },
+      { main: "Ask lots of questions to understand the root cause", sub: "You want the full picture before reacting", cats: { analytical: 3, intellectual: 2 } },
+      { main: "Jump into solutions — brainstorm options immediately", sub: "You're wired to fix things", cats: { maker: 2, organiser: 2, leadership: 1 } },
+      { main: "Research — find out what worked for others in similar situations", sub: "You trust information over instinct", cats: { intellectual: 3, analytical: 2 } }
+    ]
+  },
+  {
+    category: "Work & Effort",
+    text: "You're working on a project. What kind of challenge genuinely excites you?",
+    options: [
+      { main: "Convincing or inspiring people to believe in something", sub: "Pitching, presenting, persuading", cats: { leadership: 3, people: 2, creative: 1 } },
+      { main: "Figuring out a complex technical or logical puzzle", sub: "Code, numbers, systems, data", cats: { technical: 3, analytical: 2, maker: 1 } },
+      { main: "Creating something original that didn't exist before", sub: "Writing, designing, inventing", cats: { creative: 3, maker: 2 } },
+      { main: "Turning chaos into a smooth, working process", sub: "Planning, coordinating, making things efficient", cats: { organiser: 3, structured: 3, leadership: 1 } }
+    ]
+  },
+  {
+    category: "What Drains You",
+    text: "What kind of work makes you want to quit by lunchtime?",
+    options: [
+      { main: "Doing the same repetitive task over and over", sub: "No variety, no challenge", cats: { creative_need: 3, intellectual_need: 2 } },
+      { main: "Endless meetings and socialising with no real output", sub: "Too much talking, not enough doing", cats: { introvert: 3, maker_need: 2 } },
+      { main: "Being told exactly what to do with no room to think", sub: "No autonomy, just following orders", cats: { autonomy_need: 3, creative_need: 2 } },
+      { main: "Unstructured, vague work with no clear goal", sub: "You need a target to aim at", cats: { structure_need: 3, organiser: 1 } }
+    ]
+  },
+  {
+    category: "Your Values",
+    text: "If money wasn't a factor, what would matter most in your work?",
+    options: [
+      { main: "Making a real difference in people's lives", sub: "Impact over income", cats: { helping: 3, people: 2, meaning: 3 } },
+      { main: "Creating things that last — art, writing, products", sub: "Legacy and craftsmanship", cats: { creative: 3, maker: 2, meaning: 2 } },
+      { main: "Freedom — working on your terms, your schedule", sub: "Autonomy and independence", cats: { autonomy_need: 3, entrepreneur: 2 } },
+      { main: "Mastery — becoming truly great at something specific", sub: "Expertise and recognition", cats: { intellectual: 2, technical: 2, mastery: 3 } }
+    ]
+  },
+  {
+    category: "Social Style",
+    text: "How do you do your best work?",
+    options: [
+      { main: "Alone, deep in focus, with no interruptions", sub: "Solo is your superpower", cats: { introvert: 3, intellectual: 1, maker: 1 } },
+      { main: "In a small, trusted team where everyone knows their role", sub: "Collaboration without chaos", cats: { people: 2, leadership: 1, structured: 1 } },
+      { main: "In a busy, social environment with constant energy", sub: "Other people fuel you", cats: { extrovert: 3, people: 3, leadership: 1 } },
+      { main: "Flexibly — sometimes alone, sometimes with others", sub: "Context-dependent", cats: { people: 1, intellectual: 1 } }
+    ]
+  },
+  {
+    category: "Risk & Comfort",
+    text: "A once-in-a-lifetime opportunity appears — but it's risky and uncertain. What do you do?",
+    options: [
+      { main: "Go for it. The regret of not trying is worse than failing", sub: "You lean into risk", cats: { entrepreneur: 3, leadership: 2, autonomy_need: 2 } },
+      { main: "Research it thoroughly, then decide", sub: "Calculated risk only", cats: { analytical: 2, intellectual: 2, structured: 1 } },
+      { main: "Take a small step to test the waters first", sub: "Progress over leaps", cats: { organiser: 2, structured: 2 } },
+      { main: "Hesitate — stability matters more to you right now", sub: "Security is a real value", cats: { structure_need: 2, helping: 1 } }
+    ]
+  },
+  {
+    category: "Learning Style",
+    text: "How do you learn best?",
+    options: [
+      { main: "By doing — jumping in and figuring it out", sub: "Hands-on, trial and error", cats: { maker: 3, entrepreneur: 2 } },
+      { main: "By reading, watching, and absorbing deeply first", sub: "Understand before you act", cats: { intellectual: 3, analytical: 2 } },
+      { main: "By watching someone expert do it, then copying", sub: "Modelling and mentorship", cats: { people: 2, mastery: 2 } },
+      { main: "By teaching others — explaining makes it click", sub: "You learn through articulation", cats: { helping: 3, people: 2, intellectual: 1 } }
+    ]
+  },
+  {
+    category: "What You're Drawn To",
+    text: "Which section of a bookstore do you drift toward?",
+    options: [
+      { main: "Psychology, self-help, relationships", sub: "Human behaviour fascinates you", cats: { people: 2, helping: 2, intellectual: 2, emotional: 2 } },
+      { main: "Science, technology, history, philosophy", sub: "Big ideas and deep knowledge", cats: { intellectual: 3, analytical: 2, technical: 1 } },
+      { main: "Business, entrepreneurship, biographies", sub: "How people build things", cats: { entrepreneur: 3, leadership: 2, mastery: 1 } },
+      { main: "Art, design, fiction, poetry, culture", sub: "Aesthetics and expression", cats: { creative: 3, maker: 1 } }
+    ]
+  },
+  {
+    category: "Money & Success",
+    text: "What does 'success' honestly mean to you?",
+    options: [
+      { main: "Financial freedom — enough that money is never a worry", sub: "Security and choices", cats: { entrepreneur: 2, structured: 1, mastery: 1 } },
+      { main: "Recognition — being respected as someone great at what you do", sub: "Status and excellence", cats: { mastery: 3, leadership: 2 } },
+      { main: "Meaningful work — feeling like what you do matters", sub: "Purpose over prestige", cats: { meaning: 3, helping: 2, creative: 1 } },
+      { main: "Balance — a good life outside of work too", sub: "Work isn't everything", cats: { people: 1, autonomy_need: 2, meaning: 1 } }
+    ]
+  },
+  {
+    category: "Under Pressure",
+    text: "You're given a big, overwhelming task with no instructions. You:",
+    options: [
+      { main: "Break it into smaller pieces and start immediately", sub: "Structured action relieves stress", cats: { organiser: 3, structured: 3, leadership: 1 } },
+      { main: "Research similar things and reverse-engineer an approach", sub: "Study before you start", cats: { intellectual: 3, analytical: 2 } },
+      { main: "Ask someone experienced — collaboration saves time", sub: "You know when to seek help", cats: { people: 2, helping: 1 } },
+      { main: "Dive in creatively and adapt as you go", sub: "Imperfect action over perfect planning", cats: { creative: 2, entrepreneur: 2, maker: 2 } }
+    ]
+  },
+  {
+    category: "Your Superpower",
+    text: "Friends and colleagues come to you most often when they need...",
+    options: [
+      { main: "Advice — they trust your perspective on life decisions", sub: "You give solid, calm guidance", cats: { helping: 3, people: 3, emotional: 2 } },
+      { main: "Help understanding something complex", sub: "You explain things clearly", cats: { intellectual: 3, analytical: 2, helping: 1 } },
+      { main: "Help getting something done or organised", sub: "You execute when others freeze", cats: { organiser: 3, leadership: 2, structured: 2 } },
+      { main: "Creative ideas — you always think differently", sub: "Your mind goes places others don't", cats: { creative: 3, entrepreneur: 1, maker: 1 } }
+    ]
+  },
+  {
+    category: "Conflict & Difficulty",
+    text: "When something goes wrong in a team or project, you tend to:",
+    options: [
+      { main: "Focus on the people first — how is everyone feeling?", sub: "Emotions and morale matter", cats: { people: 3, helping: 2, emotional: 3 } },
+      { main: "Analyse what went wrong and why", sub: "Root cause before reaction", cats: { analytical: 3, intellectual: 2 } },
+      { main: "Immediately work on fixing it — action over analysis", sub: "Move fast, adjust later", cats: { maker: 2, entrepreneur: 2, leadership: 2 } },
+      { main: "Reassign and reorganise to prevent it happening again", sub: "Systems prevent future failures", cats: { organiser: 3, structured: 3 } }
+    ]
+  },
+  {
+    category: "Long-Term Vision",
+    text: "In 10 years, what picture makes your heart beat a little faster?",
+    options: [
+      { main: "Leading a team, organisation, or movement", sub: "Influence at scale", cats: { leadership: 3, people: 2, entrepreneur: 1 } },
+      { main: "Being a known expert or authority in your field", sub: "The best at what you do", cats: { mastery: 3, intellectual: 2, technical: 1 } },
+      { main: "Having built something — a business, a body of work, a product", sub: "Something that exists because of you", cats: { entrepreneur: 3, maker: 2, creative: 2 } },
+      { main: "Living simply and meaningfully — helping, creating, being free", sub: "Depth over scale", cats: { meaning: 3, helping: 2, autonomy_need: 2 } }
+    ]
+  },
+  {
+    category: "Right Now",
+    text: "Honestly, what's the biggest reason you feel stuck?",
+    options: [
+      { main: "Too many options — I don't know how to choose", sub: "Paralysis by too much possibility", cats: { intellectual: 1, creative: 1 } },
+      { main: "Fear — what if I choose wrong and waste time?", sub: "Risk aversion holding me back", cats: { structure_need: 1, autonomy_need: 1 } },
+      { main: "I know what I want but don't know how to start", sub: "Direction without a path", cats: { maker: 1, organiser: 1 } },
+      { main: "I don't feel good enough yet", sub: "Confidence and self-belief", cats: { mastery: 1, helping: 1 } }
+    ]
+  }
+];
+
+const phases = [
+  "Getting to Know You",
+  "Your Work Style",
+  "Your Values",
+  "Your Strengths",
+  "Finding Your Path"
+];
+
+// ── PROFILES ──────────────────────────────────────────────────────────
+const profiles = [
+  {
+    id: 'creative',
+    name: 'The Creator',
+    emoji: '🎨',
+    color: '#c4532a',
+    tagline: 'You make things. Your mind sees possibilities others miss.',
+    summary: 'You think visually, feel deeply, and have a relentless drive to make things that didn\'t exist before. Your superpower is original thinking — whether in writing, design, music, art, video, or any craft. The world needs what lives in your imagination.',
+    strengths: ['Original, out-of-the-box thinking', 'Deep aesthetic sensibility', 'Emotional intelligence in work', 'Can see the big picture others miss'],
+    weaknesses: ['Can struggle with routine and deadlines', 'Perfectionism can slow output', 'Business/financial side feels draining', 'Hard to "switch off" your mind'],
+    paths: [
+      { title: 'Creative Professional', icon: '✏️', desc: 'Writer, designer, filmmaker, photographer, animator — build a career around your medium.', actions: ['Build a portfolio', 'Pick one medium to master', 'Find a community of creators'] },
+      { title: 'Creative Entrepreneur', icon: '🏗️', desc: 'Start a creative business — brand studio, content agency, or a product powered by your aesthetic.', actions: ['Validate a creative service', 'Land first 3 clients', 'Build your brand online'] },
+      { title: 'Creative Technologist', icon: '💻', desc: 'Combine creativity with tech — UI/UX design, game design, creative coding, or digital marketing.', actions: ['Learn Figma or a creative tool', 'Take a UX design course', 'Build a project to show employers'] }
+    ]
+  },
+  {
+    id: 'intellectual',
+    name: 'The Thinker',
+    emoji: '🧠',
+    color: '#2a7ac4',
+    tagline: 'You go deep. Ideas, knowledge, and understanding are your oxygen.',
+    summary: 'You\'re energised by learning, complexity, and making sense of the world. You read widely, think rigorously, and have little patience for shallow answers. Your power is your mind — and the paths that let you use it fully will feel like breathing.',
+    strengths: ['Deep analytical and research ability', 'Highly knowledgeable and well-read', 'Excellent at breaking down complex problems', 'Can explain difficult things clearly'],
+    weaknesses: ['Overthinking can lead to inaction', 'Can underestimate emotional/people dimensions', 'May be impatient with "simple" thinking', 'Analysis paralysis is a real risk'],
+    paths: [
+      { title: 'Expert / Specialist', icon: '🔬', desc: 'Go deep in a field — science, law, economics, psychology, engineering, medicine, data science, philosophy.', actions: ['Identify your deepest interest', 'Pursue advanced study or certification', 'Write or speak about your expertise'] },
+      { title: 'Researcher / Analyst', icon: '📊', desc: 'Research roles in academia, think tanks, consulting firms, or data-heavy industries.', actions: ['Identify organisations doing research you respect', 'Build analytical skills (data, writing, methods)', 'Publish or present your thinking publicly'] },
+      { title: 'Strategist / Consultant', icon: '♟️', desc: 'Use your analytical mind to help organisations solve complex problems.', actions: ['Learn a consulting framework', 'Practice case studies', 'Build a reputation for clear thinking'] }
+    ]
+  },
+  {
+    id: 'helper',
+    name: 'The Giver',
+    emoji: '🤝',
+    color: '#2ac47a',
+    tagline: 'You care deeply. People feel better after talking to you.',
+    summary: 'Your strength is people. You\'re a natural listener, an empathetic presence, and someone who genuinely wants others to thrive. You feel most alive when your work makes a tangible difference in someone\'s life — not just a bottom line.',
+    strengths: ['Exceptional empathy and emotional awareness', 'Natural communicator and listener', 'Builds deep trust quickly', 'Motivated by meaning, not just money'],
+    weaknesses: ['Can absorb others\' problems and burn out', 'Struggles to say no or set boundaries', 'May undervalue your own needs', 'Can be taken advantage of'],
+    paths: [
+      { title: 'People-Facing Professional', icon: '👥', desc: 'Teaching, counselling, coaching, nursing, social work, therapy, HR, community management.', actions: ['Get certified in your area of care', 'Volunteer to build experience and clarity', 'Set boundaries early — this is career longevity'] },
+      { title: 'Healthcare or Mental Health', icon: '🏥', desc: 'Medicine, psychology, therapy, physiotherapy, nutrition — helping people at their most vulnerable.', actions: ['Map the qualifications needed', 'Shadow someone in the field first', 'Explore both clinical and non-clinical options'] },
+      { title: 'Mission-Driven Business or NGO', icon: '🌱', desc: 'Work in organisations where impact is the core metric — nonprofits, social enterprises, education reform.', actions: ['Identify causes you care about most', 'Look for organisations in those spaces', 'Find the role at the intersection of your skills and their need'] }
+    ]
+  },
+  {
+    id: 'leader',
+    name: 'The Leader',
+    emoji: '🦁',
+    color: '#c49a2a',
+    tagline: 'You move people. You see what needs to happen — and you make it happen.',
+    summary: 'You\'re energised by influence, direction, and results. People follow you naturally because you bring clarity in chaos. You\'re at your best when you\'re owning a vision, making decisions, and driving a team or organisation toward something meaningful.',
+    strengths: ['Natural ability to organise and motivate others', 'Clear decisiveness under pressure', 'Big picture thinker who can delegate', 'High drive and execution energy'],
+    weaknesses: ['Can steamroll others\' input if not careful', 'Impatience with slow or "soft" progress', 'Risk of burnout from always being "on"', 'Delegating — and truly letting go — is hard'],
+    paths: [
+      { title: 'Entrepreneur / Founder', icon: '🚀', desc: 'Build and lead something of your own. Leadership is your mode — ownership multiplies it.', actions: ['Identify a real problem you want to solve', 'Find a co-founder who complements your gaps', 'Launch something small and learn fast'] },
+      { title: 'Manager / Executive Track', icon: '🏢', desc: 'Rise in a company that rewards leadership — corporate, government, NGO, military, education.', actions: ['Seek leadership roles early, even informal ones', 'Find a mentor who is where you want to be', 'Read widely on leadership and organisational design'] },
+      { title: 'Community / Movement Builder', icon: '📣', desc: 'Build something around a cause, interest, or community — politics, activism, religion, sports.', actions: ['Start small — run a local event or online group', 'Build skills in public speaking and writing', 'Define what you actually stand for'] }
+    ]
+  },
+  {
+    id: 'builder',
+    name: 'The Builder',
+    emoji: '🔧',
+    color: '#8a4ac4',
+    tagline: 'You make things work. You\'re the person who actually gets it done.',
+    summary: 'You\'re wired for execution. While others theorise, you build. You\'re happiest when your hands (or mind) are on something real — writing code, fixing systems, making products, constructing things. You measure success by what exists that didn\'t exist before.',
+    strengths: ['High execution ability — you finish what you start', 'Strong technical aptitude and problem-solving', 'Practical, resourceful, and self-reliant', 'Great at learning on the job'],
+    weaknesses: ['May under-communicate your work to others', 'Can get lost in the details and miss the big picture', 'Networking and self-promotion don\'t come naturally', 'May undervalue the "soft" skills needed to advance'],
+    paths: [
+      { title: 'Technical / Engineering Career', icon: '⚙️', desc: 'Software engineering, electrical, mechanical, civil, data — any field where you build real things.', actions: ['Pick a technical domain to go deep in', 'Build projects that show real skill', 'Find mentors in your chosen field'] },
+      { title: 'Product Development / Startup', icon: '📦', desc: 'Use your builder instinct to create products — digital or physical — that solve real problems.', actions: ['Identify a problem that frustrates you', 'Build a simple version (MVP)', 'Get 10 people to use it and listen carefully'] },
+      { title: 'Skilled Trade or Craft', icon: '🛠️', desc: 'Architecture, construction, culinary arts, mechanics, carpentry — mastery through making.', actions: ['Invest in proper training or apprenticeship', 'Build a body of work to show', 'Charge what your skill is worth'] }
+    ]
+  },
+  {
+    id: 'organiser',
+    name: 'The Operator',
+    emoji: '🗂️',
+    color: '#c4532a',
+    tagline: 'You bring order. Where others see chaos, you see a system waiting to happen.',
+    summary: 'You\'re the backbone of every team you join. You see inefficiency and it bothers you. You\'re excellent at planning, coordinating, and making sure things actually happen. The world massively undervalues people like you — but the best organisations don\'t.',
+    strengths: ['Exceptional at planning and systems thinking', 'Reliable, thorough, and detail-oriented', 'Calm under pressure and logistically sharp', 'Can manage multiple things at once without dropping any'],
+    weaknesses: ['Can be resistant to sudden change or ambiguity', 'May undervalue creative or "soft" contributions', 'Risk of micromanaging or being too rigid', 'Can struggle to delegate — feels faster to do it yourself'],
+    paths: [
+      { title: 'Operations & Management', icon: '📋', desc: 'Project management, operations director, COO track — organisations need people who make the trains run on time.', actions: ['Get a PMP or operations certification', 'Seek roles managing complex projects', 'Learn to communicate upward clearly'] },
+      { title: 'Finance, Logistics, or Administration', icon: '📈', desc: 'Accounting, supply chain, event management, administration — precision-critical fields.', actions: ['Identify which industry appeals to you', 'Get sector-specific qualifications', 'Start in a support role and demonstrate reliability fast'] },
+      { title: 'Entrepreneur (Operational)', icon: '🏗️', desc: 'Build a service business that runs on excellent processes — an agency, consultancy, or franchise.', actions: ['Design your processes before your product', 'Find a creative co-founder who needs your structure', 'Start with what you already know how to do'] }
+    ]
+  }
+];
+
+// ── STATE ──────────────────────────────────────────────────────────────
+let current = 0;
+let answers = {};
+
+// ── FUNCTIONS ──────────────────────────────────────────────────────────
+function startQuiz() {
+  document.getElementById('intro').classList.add('hidden');
+  document.getElementById('quiz').style.display = 'block';
+  renderQ();
+}
+
+function renderQ() {
+  const q = questions[current];
+  const card = document.getElementById('q-card');
+  card.style.animation = 'none';
+  card.offsetHeight;
+  card.style.animation = 'rise 0.4s cubic-bezier(0.16,1,0.3,1) both';
+
+  const phaseIdx = Math.floor(current / 3);
+  document.getElementById('phase-label').textContent = phases[Math.min(phaseIdx, phases.length - 1)];
+  document.getElementById('qnum').textContent = current + 1;
+  document.getElementById('bar-fill').style.width = `${((current + 1) / questions.length) * 100}%`;
+  document.getElementById('q-category').textContent = q.category;
+  document.getElementById('q-text').textContent = q.text;
+
+  const list = document.getElementById('options-list');
+  list.innerHTML = '';
+  const letters = ['A', 'B', 'C', 'D'];
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn' + (answers[current] === i ? ' selected' : '');
+    btn.innerHTML = `
+      <span class="opt-letter">${letters[i]}</span>
+      <div class="opt-body">
+        <div class="opt-main">${opt.main}</div>
+        <div class="opt-sub">${opt.sub}</div>
+      </div>`;
+    btn.onclick = () => pick(i);
+    list.appendChild(btn);
+  });
+
+  document.getElementById('btn-next').disabled = answers[current] === undefined;
+  const back = document.getElementById('btn-back');
+  back.disabled = current === 0;
+
+  const next = document.getElementById('btn-next');
+  next.innerHTML = current === questions.length - 1 ? 'See My Results <span>→</span>' : 'Continue <span>→</span>';
+}
+
+function pick(i) {
+  answers[current] = i;
+  document.querySelectorAll('.opt-btn').forEach((b, idx) => b.classList.toggle('selected', idx === i));
+  document.getElementById('btn-next').disabled = false;
+}
+
+function goNext() {
+  if (answers[current] === undefined) return;
+  if (current < questions.length - 1) { current++; renderQ(); }
+  else showResults();
+}
+
+function goBack() {
+  if (current > 0) { current--; renderQ(); }
+}
+
+// ── SCORING ──────────────────────────────────────────────────────────
+function score() {
+  const s = { creative: 0, intellectual: 0, helper: 0, leader: 0, builder: 0, organiser: 0 };
+  const mapping = {
+    creative: 'creative', intellectual: 'intellectual', people: 'helper',
+    helping: 'helper', emotional: 'helper', leadership: 'leader', entrepreneur: 'leader',
+    maker: 'builder', technical: 'builder', organiser: 'organiser', structured: 'organiser',
+    analytical: 'intellectual', mastery: 'intellectual', meaning: 'helper',
+    autonomy_need: 'leader', introvert: 'intellectual', extrovert: 'helper',
+    creative_need: 'creative', intellectual_need: 'intellectual', maker_need: 'builder',
+    structure_need: 'organiser'
+  };
+
+  questions.forEach((q, qi) => {
+    const ai = answers[qi];
+    if (ai === undefined) return;
+    const cats = q.options[ai].cats;
+    Object.entries(cats).forEach(([k, v]) => {
+      const pid = mapping[k];
+      if (pid && s[pid] !== undefined) s[pid] += v;
+    });
+  });
+  return s;
+}
+
+// ── RESULTS ──────────────────────────────────────────────────────────
+function showResults() {
+  document.getElementById('quiz').style.display = 'none';
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.add('active');
+
+  const s = score();
+  const profMap = { creative: 0, intellectual: 1, helper: 2, leader: 3, builder: 4, organiser: 5 };
+  const ranked = Object.entries(s)
+    .map(([id, val]) => ({ profile: profiles[profMap[id]], val }))
+    .sort((a, b) => b.val - a.val);
+
+  const top = ranked[0].profile;
+  const second = ranked[1].profile;
+  const max = Math.max(...ranked.map(r => r.val), 1);
+
+  // Strengths / weaknesses = top profile's
+  const swHtml = `
+    <div class="sw-grid">
+      <div class="sw-card strengths">
+        <div class="sw-head">Your Strengths</div>
+        ${top.strengths.map(s => `<div class="sw-item"><div class="sw-dot"></div><span>${s}</span></div>`).join('')}
+      </div>
+      <div class="sw-card weaknesses">
+        <div class="sw-head">Watch Out For</div>
+        ${top.weaknesses.map(w => `<div class="sw-item"><div class="sw-dot"></div><span>${w}</span></div>`).join('')}
+      </div>
+    </div>`;
+
+  // Score bars
+  const barColors = { creative: '#c4532a', intellectual: '#2a7ac4', helper: '#2ac47a', leader: '#c49a2a', builder: '#8a4ac4', organiser: '#c4532a' };
+  const barHtml = ranked.map(({ profile, val }) => {
+    const pct = Math.round((val / max) * 100);
+    return `
+      <div class="score-row">
+        <div class="score-top">
+          <div class="score-name-wrap">
+            <span class="score-emoji">${profile.emoji}</span>
+            <span class="score-name">${profile.name}</span>
+          </div>
+          <span class="score-num" style="color:${profile.color}">${pct}%</span>
+        </div>
+        <div class="score-track">
+          <div class="score-fill" style="background:${profile.color}" data-w="${pct}"></div>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Top 3 paths (from top + second profile)
+  const pathCards = [
+    ...top.paths.map((p, i) => ({ ...p, rank: i + 1, fromProfile: top })),
+    ...second.paths.slice(0, 1).map(p => ({ ...p, rank: 4, fromProfile: second }))
+  ].map(p => `
+    <div class="path-card ${p.rank === 1 ? 'rank-1' : ''}">
+      <div class="path-rank">${p.rank === 1 ? '★' : '#' + p.rank}</div>
+      <div class="path-top">
+        <div class="path-icon-wrap">${p.icon}</div>
+        <div class="path-title">${p.title}</div>
+      </div>
+      <div class="path-desc">${p.desc}</div>
+      <div class="path-actions">${p.actions.map(a => `<span class="action-chip">${a}</span>`).join('')}</div>
+    </div>`).join('');
+
+  resultsEl.innerHTML = `
+    <div class="result-masthead">
+      <div class="result-label">Your Life Compass Result</div>
+      <div class="result-headline">You are <em>${top.name}</em> ${top.emoji}</div>
+      <p class="result-summary">${top.summary}</p>
+    </div>
+
+    ${swHtml}
+
+    <div class="profile-section">
+      <div class="section-label">Your Full Profile</div>
+      ${barHtml}
+    </div>
+
+    <div class="section-label" style="margin-bottom:16px;">Paths That Fit You</div>
+    <div class="paths-grid">${pathCards}</div>
+
+    <div class="closing-note">
+      <p>
+        <strong>A note on this result:</strong> You're not just one type — you're a mix, and that mix evolves.
+        Use this as a starting point, not a verdict. The most important insight is often what
+        <em>drains</em> you, not just what excites you. Design your life to do more of the first column and less of the second.
+      </p>
+    </div>
+
+    <button class="restart-btn" onclick="restartQuiz()">↺ Retake the Quiz</button>`;
+
+  setTimeout(() => {
+    document.querySelectorAll('.score-fill').forEach(el => {
+      el.style.width = el.dataset.w + '%';
+    });
+  }, 200);
+}
+
+function restartQuiz() {
+  answers = {};
+  current = 0;
+  document.getElementById('results').classList.remove('active');
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('quiz').style.display = 'block';
+  renderQ();
+}
+</script>
 </body>
 </html>
-
