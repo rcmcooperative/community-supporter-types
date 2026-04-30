@@ -88,75 +88,15 @@ const questions = [
       { main: "Business, entrepreneurship, biographies", sub: "How people build things", cats: { entrepreneur: 3, leadership: 2, mastery: 1 } },
       { main: "Art, design, fiction, poetry, culture", sub: "Aesthetics and expression", cats: { creative: 3, maker: 1 } }
     ]
-  },
-  {
-    category: "Money & Success",
-    text: "What does 'success' honestly mean to you?",
-    options: [
-      { main: "Financial freedom — enough that money is never a worry", sub: "Security and choices", cats: { entrepreneur: 2, structured: 1, mastery: 1 } },
-      { main: "Recognition — being respected as someone great at what you do", sub: "Status and excellence", cats: { mastery: 3, leadership: 2 } },
-      { main: "Meaningful work — feeling like what you do matters", sub: "Purpose over prestige", cats: { meaning: 3, helping: 2, creative: 1 } },
-      { main: "Balance — a good life outside of work too", sub: "Work isn't everything", cats: { people: 1, autonomy_need: 2, meaning: 1 } }
-    ]
-  },
-  {
-    category: "Under Pressure",
-    text: "You're given a big, overwhelming task with no instructions. You:",
-    options: [
-      { main: "Break it into smaller pieces and start immediately", sub: "Structured action relieves stress", cats: { organiser: 3, structured: 3, leadership: 1 } },
-      { main: "Research similar things and reverse-engineer an approach", sub: "Study before you start", cats: { intellectual: 3, analytical: 2 } },
-      { main: "Ask someone experienced — collaboration saves time", sub: "You know when to seek help", cats: { people: 2, helping: 1 } },
-      { main: "Dive in creatively and adapt as you go", sub: "Imperfect action over perfect planning", cats: { creative: 2, entrepreneur: 2, maker: 2 } }
-    ]
-  },
-  {
-    category: "Your Superpower",
-    text: "Friends and colleagues come to you most often when they need...",
-    options: [
-      { main: "Advice — they trust your perspective on life decisions", sub: "You give solid, calm guidance", cats: { helping: 3, people: 3, emotional: 2 } },
-      { main: "Help understanding something complex", sub: "You explain things clearly", cats: { intellectual: 3, analytical: 2, helping: 1 } },
-      { main: "Help getting something done or organised", sub: "You execute when others freeze", cats: { organiser: 3, leadership: 2, structured: 2 } },
-      { main: "Creative ideas — you always think differently", sub: "Your mind goes places others don't", cats: { creative: 3, entrepreneur: 1, maker: 1 } }
-    ]
-  },
-  {
-    category: "Conflict & Difficulty",
-    text: "When something goes wrong in a team or project, you tend to:",
-    options: [
-      { main: "Focus on the people first — how is everyone feeling?", sub: "Emotions and morale matter", cats: { people: 3, helping: 2, emotional: 3 } },
-      { main: "Analyse what went wrong and why", sub: "Root cause before reaction", cats: { analytical: 3, intellectual: 2 } },
-      { main: "Immediately work on fixing it — action over analysis", sub: "Move fast, adjust later", cats: { maker: 2, entrepreneur: 2, leadership: 2 } },
-      { main: "Reassign and reorganise to prevent it happening again", sub: "Systems prevent future failures", cats: { organiser: 3, structured: 3 } }
-    ]
-  },
-  {
-    category: "Long-Term Vision",
-    text: "In 10 years, what picture makes your heart beat a little faster?",
-    options: [
-      { main: "Leading a team, organisation, or movement", sub: "Influence at scale", cats: { leadership: 3, people: 2, entrepreneur: 1 } },
-      { main: "Being a known expert or authority in your field", sub: "The best at what you do", cats: { mastery: 3, intellectual: 2, technical: 1 } },
-      { main: "Having built something — a business, a body of work, a product", sub: "Something that exists because of you", cats: { entrepreneur: 3, maker: 2, creative: 2 } },
-      { main: "Living simply and meaningfully — helping, creating, being free", sub: "Depth over scale", cats: { meaning: 3, helping: 2, autonomy_need: 2 } }
-    ]
-  },
-  {
-    category: "Right Now",
-    text: "Honestly, what's the biggest reason you feel stuck?",
-    options: [
-      { main: "Too many options — I don't know how to choose", sub: "Paralysis by too much possibility", cats: { intellectual: 1, creative: 1 } },
-      { main: "Fear — what if I choose wrong and waste time?", sub: "Risk aversion holding me back", cats: { structure_need: 1, autonomy_need: 1 } },
-      { main: "I know what I want but don't know how to start", sub: "Direction without a path", cats: { maker: 1, organiser: 1 } },
-      { main: "I don't feel good enough yet", sub: "Confidence and self-belief", cats: { mastery: 1, helping: 1 } }
-    ]
   }
 ];
 
 const phases = [
-  "Getting to Know You",
-  "Your Work Style",
-  "Your Values",
-  "Your Strengths",
-  "Finding Your Path"
+  "1",
+  "2",
+  "3",
+  "4",
+  "5"
 ];
 
 const profiles = [

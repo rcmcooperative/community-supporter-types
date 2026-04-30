@@ -1,6 +1,6 @@
 # What type of community supporter are you
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This repository houses the code, persona logic, and documentation for the **Community Supporter Type Quiz**, a project developed during the **[CW26 Hack Day 2026](https://www.software.ac.uk/workshop/collaborations-workshop-2026-cw26)**.
@@ -54,6 +54,27 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cassgvp"><img src="https://avatars.githubusercontent.com/u/43407869?v=4?s=100" width="100px;" alt="Cassandra Gould van Praag"/><br /><sub><b>Cassandra Gould van Praag</b></sub></a><br /><a href="#doc-cassgvp" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/amangoel185"><img src="https://avatars.githubusercontent.com/u/10528392?v=4?s=100" width="100px;" alt="Aman Goel"/><br /><sub><b>Aman Goel</b></sub></a><br /><a href="#doc-amangoel185" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vmaraneta"><img src="https://avatars.githubusercontent.com/u/211810747?v=4?s=100" width="100px;" alt="Anica Araneta"/><br /><sub><b>Anica Araneta</b></sub></a><br /><a href="#doc-vmaraneta" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/eleanor-broadway"><img src="https://avatars.githubusercontent.com/u/52749246?v=4?s=100" width="100px;" alt="eleanor-broadway"/><br /><sub><b>eleanor-broadway</b></sub></a><br /><a href="#doc-eleanor-broadway" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hjrucl90"><img src="https://avatars.githubusercontent.com/u/185346822?v=4?s=100" width="100px;" alt="Hollie Rowland"/><br /><sub><b>Hollie Rowland</b></sub></a><br /><a href="#doc-hjrucl90" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://erambler.co.uk/"><img src="https://avatars.githubusercontent.com/u/457628?v=4?s=100" width="100px;" alt="Jez Cope"/><br /><sub><b>Jez Cope</b></sub></a><br /><a href="#doc-jezcope" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://malvikasharan.github.io/"><img src="https://avatars.githubusercontent.com/u/5370471?v=4?s=100" width="100px;" alt="Malvika Sharan"/><br /><sub><b>Malvika Sharan</b></sub></a><br /><a href="#doc-malvikasharan" title="Documentation">📖</a> <a href="#content-malvikasharan" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/maryokolie"><img src="https://avatars.githubusercontent.com/u/92737548?v=4?s=100" width="100px;" alt="Maryblessing"/><br /><sub><b>Maryblessing</b></sub></a><br /><a href="#content-maryokolie" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Maryblessing"><img src="https://avatars.githubusercontent.com/u/79088348?v=4?s=100" width="100px;" alt="Maryblessing O."/><br /><sub><b>Maryblessing O.</b></sub></a><br /><a href="#doc-Maryblessing" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mdonnay-ssi"><img src="https://avatars.githubusercontent.com/u/214476088?v=4?s=100" width="100px;" alt="Michael Donnay"/><br /><sub><b>Michael Donnay</b></sub></a><br /><a href="#doc-mdonnay-ssi" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://rgaiacs.com"><img src="https://avatars.githubusercontent.com/u/1506457?v=4?s=100" width="100px;" alt="Raniere Silva"/><br /><sub><b>Raniere Silva</b></sub></a><br /><a href="#doc-rgaiacs" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/salmathalji"><img src="https://avatars.githubusercontent.com/u/56680865?v=4?s=100" width="100px;" alt="Salma Thalji"/><br /><sub><b>Salma Thalji</b></sub></a><br /><a href="#doc-salmathalji" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SaraVilla"><img src="https://avatars.githubusercontent.com/u/43204602?v=4?s=100" width="100px;" alt="Sara Villa"/><br /><sub><b>Sara Villa</b></sub></a><br /><a href="#doc-saravilla" title="Documentation">📖</a></td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->

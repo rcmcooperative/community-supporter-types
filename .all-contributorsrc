@@ -80,6 +80,51 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Maryblessing",
+      "name": "Maryblessing O.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79088348?v=4",
+      "profile": "https://github.com/Maryblessing",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mdonnay-ssi",
+      "name": "Michael Donnay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214476088?v=4",
+      "profile": "https://github.com/mdonnay-ssi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rgaiacs",
+      "name": "Raniere Silva",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1506457?v=4",
+      "profile": "http://rgaiacs.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "salmathalji",
+      "name": "Salma Thalji",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56680865?v=4",
+      "profile": "https://github.com/salmathalji",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "saravilla",
+      "name": "Sara Villa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43204602?v=4",
+      "profile": "https://github.com/SaraVilla",
+      "contributions": [
+        "doc"
+      ]
     }
   ]
 }
