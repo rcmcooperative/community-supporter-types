@@ -23,6 +23,7 @@ We created 8 scenario-based questions to reveal which of the five RCM skill area
 |------|-------------|
 | `persona-questions.csv` | Source questions with answer options mapped to each persona |
 | `personas.txt` | Original persona definitions |
+| `persona-descriptions.csv` | Persona description for display |
 | `RCMSkills.csv` | RCM skill matrix used to ground the quiz options |
 | `SKILL.md` | Copilot CLI skill — use this to regenerate all outputs from new source files |
 
