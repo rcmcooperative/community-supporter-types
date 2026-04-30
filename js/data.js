@@ -1,94 +1,110 @@
 const questions = [
   {
     category: "Your Natural Energy",
-    text: "At the end of a long day, what kind of work leaves you feeling tired but still satisfied?",
+    text: "You're at a conference with your peers. Which of the following activities are you most likely doing?",
     options: [
-      { main: "Working with people — listening, helping, or leading them", sub: "Conversations, coaching, teamwork", cats: { people: 3, helping: 2, leadership: 1 } },
-      { main: "Working with ideas — reading, writing, analysing", sub: "Research, strategy, thinking through problems", cats: { intellectual: 3, creative: 1, analytical: 2 } },
-      { main: "Making things — building, designing, or fixing", sub: "Crafts, code, products, physical work", cats: { maker: 3, creative: 2, technical: 2 } },
-      { main: "Organising and executing — planning, managing, getting things done", sub: "Systems, schedules, results", cats: { organiser: 3, leadership: 2, structured: 2 } }
+      { main: "Live-posting highlights, writing threads, and making sure your followers don't miss a thing", cats: { creative: 1 } },
+      { main: "Playing matchmaker in the hallways — connecting people who absolutely need to know each other", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "Scoping trends, spotting opportunities, and working on the next steps for the community", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "Making sure everyone has the agenda, the Wi-Fi code, and knows where the good coffee is", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "Hunting down the speaker who mentioned reproducible workflows so you can geek out together", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      { main: "Eating and relaxing", sub: "Systems, schedules, results", cats: { organiser: 1 } }
     ]
   },
   {
     category: "How You Think",
-    text: "A friend has a big problem. What do you instinctively do first?",
+    text: "You're at a meeting that feels disorganized. What role do you naturally assume?",
     options: [
-      { main: "Listen fully before saying anything", sub: "You care about making them feel heard", cats: { people: 3, helping: 3, emotional: 2 } },
-      { main: "Ask lots of questions to understand the root cause", sub: "You want the full picture before reacting", cats: { analytical: 3, intellectual: 2 } },
-      { main: "Jump into solutions — brainstorm options immediately", sub: "You're wired to fix things", cats: { maker: 2, organiser: 2, leadership: 1 } },
-      { main: "Research — find out what worked for others in similar situations", sub: "You trust information over instinct", cats: { intellectual: 3, analytical: 2 } }
+      { main: "You draft a crisp summary of what's been said so everyone's aligned on the same page", cats: { creative: 1 } },
+      { main: "You check in with quieter voices in the room to make sure everyone gets heard", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "You gently redirect the group toward goals and try to synthesise different ideas into a shared vision", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "You volunteer to capture action items and chase people up afterwards (cheerfully)", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "You start sketching a workflow diagram on a napkin to untangle the confusion", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      { main: "Sit and watch the chaos unfold", cats: { organiser: 1 } }
     ]
   },
   {
     category: "Work & Effort",
-    text: "You're working on a project. What kind of challenge genuinely excites you?",
+    text: "Someone proposes a new project at your workplace. What are you are most likely to suggest?",
     options: [
-      { main: "Convincing or inspiring people to believe in something", sub: "Pitching, presenting, persuading", cats: { leadership: 3, people: 2, creative: 1 } },
-      { main: "Figuring out a complex technical or logical puzzle", sub: "Code, numbers, systems, data", cats: { technical: 3, analytical: 2, maker: 1 } },
-      { main: "Creating something original that didn't exist before", sub: "Writing, designing, inventing", cats: { creative: 3, maker: 2 } },
-      { main: "Turning chaos into a smooth, working process", sub: "Planning, coordinating, making things efficient", cats: { organiser: 3, structured: 3, leadership: 1 } }
+      { main: "We need a comms plan! Let's think about the narrative and how we announce this to the world.", cats: { creative: 1 } },
+      { main: "Who are our stakeholders? Let's build an onboarding plan and get the community involved from day one.", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "What's the strategic fit? Let me do a quick horizon scan before we commit to anything.", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "Setting up a timeline, a risk register, and defining who owns what before we start.", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "Have we decided on the license, version control, and whether this will be open source?", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      { main: "Jump in and have a go at it", cats: { organiser: 1 } }
     ]
   },
   {
     category: "What Drains You",
-    text: "What kind of work makes you want to quit by lunchtime?",
+    text: "You are in a hackathon refreshment break. Someone says they are contributing to project 'Foo'. What is your first comment?",
     options: [
-      { main: "Doing the same repetitive task over and over", sub: "No variety, no challenge", cats: { creative_need: 3, intellectual_need: 2 } },
-      { main: "Endless meetings and socialising with no real output", sub: "Too much talking, not enough doing", cats: { introvert: 3, maker_need: 2 } },
-      { main: "Being told exactly what to do with no room to think", sub: "No autonomy, just following orders", cats: { autonomy_need: 3, creative_need: 2 } },
-      { main: "Unstructured, vague work with no clear goal", sub: "You need a target to aim at", cats: { structure_need: 3, organiser: 1 } }
+      { main: "I've seen your posts about it! Have you thought about a newsletter or blog series?", cats: { creative: 1 } },
+      { main: "Amazing! Who else is involved? How can other people get on board?", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "Interesting - how does it fit into the broader ecosystem? Have you thought about the long-term sustainability?", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "You can't resist asking about the roadmap. Any key milestones coming up soon?", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "Nice! What stack are you using? Is the code open source and the data FAIR?", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      { main: "That's a nice project", cats: { organiser: 1 } }
     ]
   },
   {
     category: "Your Values",
-    text: "If money wasn't a factor, what would matter most in your work?",
+    text: "You are part of an event organizing group. What role are you most likely to take?",
     options: [
-      { main: "Making a real difference in people's lives", sub: "Impact over income", cats: { helping: 3, people: 2, meaning: 3 } },
-      { main: "Creating things that last — art, writing, products", sub: "Legacy and craftsmanship", cats: { creative: 3, maker: 2, meaning: 2 } },
-      { main: "Freedom — working on your terms, your schedule", sub: "Autonomy and independence", cats: { autonomy_need: 3, entrepreneur: 2 } },
-      { main: "Mastery — becoming truly great at something specific", sub: "Expertise and recognition", cats: { intellectual: 2, technical: 2, mastery: 3 } }
+      { main: "Writing the event narrative, promotional copy, and keeping the social buzz alive", cats: { creative: 1 } },
+      { main: "Designing the programme to encourage participation and centre diverse voices", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "Ensuring the event with the community's goals and identifying partnership opportunities", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "Managing logistics, tracking the budget, and making sure nothing falls through the cracks", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "Setting up the tech - platform, recording, accessibility tools, and shared notes", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      { main: "Purchase the ticket and attend the event", cats: { organiser: 1 } }
     ]
   },
   {
     category: "Social Style",
-    text: "How do you do your best work?",
+    text: "You are doing a retrospective for a project. What do you most notice in your notes?",
     options: [
-      { main: "Alone, deep in focus, with no interruptions", sub: "Solo is your superpower", cats: { introvert: 3, intellectual: 1, maker: 1 } },
-      { main: "In a small, trusted team where everyone knows their role", sub: "Collaboration without chaos", cats: { people: 2, leadership: 1, structured: 1 } },
-      { main: "In a busy, social environment with constant energy", sub: "Other people fuel you", cats: { extrovert: 3, people: 3, leadership: 1 } },
-      { main: "Flexibly — sometimes alone, sometimes with others", sub: "Context-dependent", cats: { people: 1, intellectual: 1 } }
+      { main: "Whether key messages reached the right audiences — and what landed vs. what flopped", cats: { creative: 1 } },
+      { main: "How engaged the community felt, and whether everyone truly had a voice", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "They are focused on the big picture and look at how things connect with other communities", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "Whether timelines, budgets, and action items were actually tracked and closed out", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "Whether the code is reproducible, documented, and properly archived and hopefully published on GitHub/Zenodo for others to build on", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      { main: "Retrospective? Huh! I wasn't even a part of that", cats: { organiser: 1 } }
     ]
   },
   {
     category: "Risk & Comfort",
-    text: "A once-in-a-lifetime opportunity appears — but it's risky and uncertain. What do you do?",
+    text: "Your colleagues come to your office and rant about an infrastructure is not working efficiently. What is your reaction?",
     options: [
-      { main: "Go for it. The regret of not trying is worse than failing", sub: "You lean into risk", cats: { entrepreneur: 3, leadership: 2, autonomy_need: 2 } },
-      { main: "Research it thoroughly, then decide", sub: "Calculated risk only", cats: { analytical: 2, intellectual: 2, structured: 1 } },
-      { main: "Take a small step to test the waters first", sub: "Progress over leaps", cats: { organiser: 2, structured: 2 } },
-      { main: "Hesitate — stability matters more to you right now", sub: "Security is a real value", cats: { structure_need: 2, helping: 1 } }
+      { main: "You listen, then suggest they find a solution together and channel it into a blog post or even better share it as a chapter in The Turing Way", cats: { creative: 1 } },
+      { main: "You empathise deeply, then ask who else feels this way and how to bring them together", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "You help them reframe the rant as a chance to identify bigger issues that other people might be facing to have broader structural discussion to identify a solution together", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "You pull out your notebook and start capturing their concerns as potential action items, and come back next day with a plan for how this will solved", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "You're already mid-rant with them, tabs open, links flying, and a GitHub issue drafted", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      // { main: "Ugh, same!", cats: { organiser: 1 } }
     ]
   },
   {
     category: "Learning Style",
-    text: "How do you learn best?",
+    text: "You're working in a group to solve a problem. Where do you start?",
     options: [
-      { main: "By doing — jumping in and figuring it out", sub: "Hands-on, trial and error", cats: { maker: 3, entrepreneur: 2 } },
-      { main: "By reading, watching, and absorbing deeply first", sub: "Understand before you act", cats: { intellectual: 3, analytical: 2 } },
-      { main: "By watching someone expert do it, then copying", sub: "Modelling and mentorship", cats: { people: 2, mastery: 2 } },
-      { main: "By teaching others — explaining makes it click", sub: "You learn through articulation", cats: { helping: 3, people: 2, intellectual: 1 } }
+      { main: "By crafting a shared message that resonates with every audience you need to reach", cats: { creative: 1 } },
+      { main: "By listening to each group first to understand how they relate to one another", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
+      { main: "By identifying the key decision-makers and figuring out overlaps between their interests", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
+      { main: "By clarifying roles, responsibilities, and who owns which part of the solution", sub: "Systems, schedules, results", cats: { leader: 1 } },
+      { main: "By mapping the technical dependencies and infrastructure constraints first, ensuring everyone understand what can or can not be done", sub: "Systems, schedules, results", cats: { builder : 1 } },
+      // { main: "...", cats: { organiser: 1 } }
     ]
   },
-  {
-    category: "What You're Drawn To",
-    text: "Which section of a bookstore do you drift toward?",
-    options: [
-      { main: "Psychology, self-help, relationships", sub: "Human behaviour fascinates you", cats: { people: 2, helping: 2, intellectual: 2, emotional: 2 } },
-      { main: "Science, technology, history, philosophy", sub: "Big ideas and deep knowledge", cats: { intellectual: 3, analytical: 2, technical: 1 } },
-      { main: "Business, entrepreneurship, biographies", sub: "How people build things", cats: { entrepreneur: 3, leadership: 2, mastery: 1 } },
-      { main: "Art, design, fiction, poetry, culture", sub: "Aesthetics and expression", cats: { creative: 3, maker: 1 } }
-    ]
-  }
+  // {
+  //   category: "What You're Drawn To",
+  //   text: "Which section of a bookstore do you drift toward?",
+  //   options: [
+  //     { main: "Psychology, self-help, relationships", sub: "Human behaviour fascinates you", cats: { people: 2, helping: 2, intellectual: 2, emotional: 2 } },
+  //     { main: "Science, technology, history, philosophy", sub: "Big ideas and deep knowledge", cats: { intellectual: 3, analytical: 2, technical: 1 } },
+  //     { main: "Business, entrepreneurship, biographies", sub: "How people build things", cats: { entrepreneur: 3, leadership: 2, mastery: 1 } },
+  //     { main: "Art, design, fiction, poetry, culture", sub: "Aesthetics and expression", cats: { creative: 3, maker: 1 } }
+  //   ]
+  // }
 ];
 
 const phases = [
