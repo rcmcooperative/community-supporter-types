@@ -122,7 +122,7 @@ const profiles = [
     emoji: '📢',
     color: '#c4532a',
     tagline: 'Core skill: Communication',
-    summary: 'You craft stories, amplify voices, and make sure the right messages reach the right people at the right time. Your superpower is turning complex ideas into compelling content that moves communities to action. Congratulations! You are a Research Community Manager.',
+    summary: 'Core skill: Communication. You craft stories, amplify voices, and make sure the right messages reach the right people at the right time. Your superpower is turning complex ideas into compelling content that moves communities to action. Congratulations! You are a Research Community Manager.',
     strengths: ['You turn complex ideas into compelling stories that reach and inspire the right audiences at the right time.'],
     weaknesses: ['You can focus so much on broadcasting that listening and deeper community engagement gets left behind.'],
     paths: [
@@ -137,7 +137,7 @@ const profiles = [
     emoji: '🤝',
     color: '#2a7ac4',
     tagline: 'Core skill: Enaggement',
-    summary: 'You bring people together, spark connections, and make sure everyone has a seat at the table. Your superpower is building belonging and creating spaces where communities genuinely thrive. Congratulations! You are a Research Community Manager.',
+    summary: 'Core skill: Enaggement. You bring people together, spark connections, and make sure everyone has a seat at the table. Your superpower is building belonging and creating spaces where communities genuinely thrive. Congratulations! You are a Research Community Manager.',
     strengths: ['You create spaces where people genuinely belong and spark connections that wouldn\'t happen without you.'],
     weaknesses: ['Saying yes to everyone can stretch you too thin and tip you toward burnout before you notice it happening.'],
     paths: [
@@ -152,7 +152,7 @@ const profiles = [
     emoji: '🧠',
     color: '#2ac47a',
     tagline: 'Core skill: Strategic',
-    summary: 'You are helping to articulate the community\'s priorities, identify areas for growth or collaboration, and building collaborations with other communities. You advocate for your community to people outside of it and advocate for new leaders within in. Congratulations! You are a Research Community Manager.',
+    summary: 'Core skill: Strategic. You are helping to articulate the community\'s priorities, identify areas for growth or collaboration, and building collaborations with other communities. You advocate for your community to people outside of it and advocate for new leaders within in. Congratulations! You are a Research Community Manager.',
     strengths: ['Thinking about the big picture. Looking for ways to improve process and help people work better. Identifying future opportunities and potential risks.'],
     weaknesses: ['Become too focused on process and losing sight of the most important part of community - the people!'],
     paths: [
@@ -167,7 +167,7 @@ const profiles = [
     emoji: '📋',
     color: '#c49a2a',
     tagline: 'Core skill: Accountability',
-    summary: 'You keep everything running smoothly, timelines, budgets, action items, nothing slips through. Your superpower is turning good intentions into reliable, trackable outcomes. Congratulations! You are a Research Community Manager.',
+    summary: 'Core skill: Accountability. You keep everything running smoothly, timelines, budgets, action items, nothing slips through. Your superpower is turning good intentions into reliable, trackable outcomes. Congratulations! You are a Research Community Manager.',
     strengths: ['Nothing falls through the cracks on your watch - you bring the structure and reliability every community needs.'],
     weaknesses: ['Rigid processes can stifle the spontaneity and creativity that makes community work come alive.'],
     paths: [
@@ -182,7 +182,7 @@ const profiles = [
     emoji: '💻',
     color: '#8a4ac4',
     tagline: 'Core skill: Technical',
-    summary: 'You love the tools, the code, and the infrastructure that makes open research possible. Your superpower is embedding reproducible, ethical, and open practices into everything you touch. Congratulations! You are a Research Community Manager.',
+    summary: 'Core skill: Technical. You love the tools, the code, and the infrastructure that makes open research possible. Your superpower is embedding reproducible, ethical, and open practices into everything you touch. Congratulations! You are a Research Community Manager.',
     strengths: ['You build the open and reproducible infrastructure that gives your community a solid and trustworthy foundation.'],
     weaknesses: ['Technical jargon and tool-first thinking can unintentionally exclude the very people you are trying to support.'],
     paths: [
