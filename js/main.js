@@ -26,7 +26,7 @@ function renderQ() {
 
   const list = document.getElementById('options-list');
   list.innerHTML = '';
-  const letters = ['A', 'B', 'C', 'D'];
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   q.options.forEach((opt, i) => {
     const btn = document.createElement('button');
     btn.className = 'opt-btn' + (answers[current] === i ? ' selected' : '');
