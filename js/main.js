@@ -154,7 +154,7 @@ function showResults() {
 
   resultsEl.innerHTML = `
     <div class="result-masthead">
-      <div class="result-label">Your Life Compass Result</div>
+      <div class="result-label">Your Community Supporter Result</div>
       <div class="result-headline">You are <em>${top.name}</em> ${top.emoji}</div>
       <p class="result-summary">${top.summary}</p>
     </div>
