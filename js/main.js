@@ -6,6 +6,7 @@ let answers = {};
 function startQuiz() {
   document.getElementById('intro').classList.add('hidden');
   document.getElementById('quiz').style.display = 'block';
+  document.getElementById('qcount').textContent = questions.length;
   renderQ();
 }
 
@@ -25,7 +26,7 @@ function renderQ() {
 
   const list = document.getElementById('options-list');
   list.innerHTML = '';
-  const letters = ['A', 'B', 'C', 'D'];
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   q.options.forEach((opt, i) => {
     const btn = document.createElement('button');
     btn.className = 'opt-btn' + (answers[current] === i ? ' selected' : '');
@@ -33,7 +34,6 @@ function renderQ() {
       <span class="opt-letter">${letters[i]}</span>
       <div class="opt-body">
         <div class="opt-main">${opt.main}</div>
-        <div class="opt-sub">${opt.sub}</div>
       </div>`;
     btn.onclick = () => pick(i);
     list.appendChild(btn);
@@ -136,24 +136,24 @@ function showResults() {
       </div>`;
   }).join('');
 
-  // Top 3 paths (from top + second profile)
-  // const pathCards = [
-  //   ...top.paths.map((p, i) => ({ ...p, rank: i + 1, fromProfile: top })),
-  //   ...second.paths.slice(0, 1).map(p => ({ ...p, rank: 4, fromProfile: second }))
-  // ].map(p => `
-  //   <div class="path-card ${p.rank === 1 ? 'rank-1' : ''}">
-  //     <div class="path-rank">${p.rank === 1 ? '★' : '#' + p.rank}</div>
-  //     <div class="path-top">
-  //       <div class="path-icon-wrap">${p.icon}</div>
-  //       <div class="path-title">${p.title}</div>
-  //     </div>
-  //     <div class="path-desc">${p.desc}</div>
-  //     <div class="path-actions">${p.actions.map(a => `<span class="action-chip">${a}</span>`).join('')}</div>
-  //   </div>`).join('');
+//  Top 3 paths (from top + second profile)
+  const pathCards = [
+    ...top.paths.map((p, i) => ({ ...p, rank: i + 1, fromProfile: top })),
+    ...second.paths.slice(0, 1).map(p => ({ ...p, rank: 4, fromProfile: second }))
+  ].map(p => `
+    <div class="path-card ${p.rank === 1 ? 'rank-1' : ''}">
+      <div class="path-rank">${p.rank === 1 ? '★' : '#' + p.rank}</div>
+      <div class="path-top">
+        <div class="path-icon-wrap">${p.icon}</div>
+        <div class="path-title">${p.title}</div>
+      </div>
+      <div class="path-desc">${p.desc}</div>
+      <div class="path-actions">${p.actions.map(a => `<span class="action-chip">${a}</span>`).join('')}</div>
+    </div>`).join('');
 
   resultsEl.innerHTML = `
     <div class="result-masthead">
-      <div class="result-label">Your Life Compass Result</div>
+      <div class="result-label">Your Community Supporter Result</div>
       <div class="result-headline">You are <em>${top.name}</em> ${top.emoji}</div>
       <p class="result-summary">${top.summary}</p>
     </div>
