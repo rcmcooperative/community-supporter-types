@@ -169,11 +169,11 @@ const profiles = [
     summary: 'You think visually, feel deeply, and have a relentless drive to make things that didn\'t exist before. Your superpower is original thinking — whether in writing, design, music, art, video, or any craft. The world needs what lives in your imagination.',
     strengths: ['Original, out-of-the-box thinking', 'Deep aesthetic sensibility', 'Emotional intelligence in work', 'Can see the big picture others miss'],
     weaknesses: ['Can struggle with routine and deadlines', 'Perfectionism can slow output', 'Business/financial side feels draining', 'Hard to "switch off" your mind'],
-    // paths: [
-    //   { title: 'Creative Professional', icon: '✏️', desc: 'Writer, designer, filmmaker, photographer, animator — build a career around your medium.', actions: ['Build a portfolio', 'Pick one medium to master', 'Find a community of creators'] },
-    //   { title: 'Creative Entrepreneur', icon: '🏗️', desc: 'Start a creative business — brand studio, content agency, or a product powered by your aesthetic.', actions: ['Validate a creative service', 'Land first 3 clients', 'Build your brand online'] },
-    //   { title: 'Creative Technologist', icon: '💻', desc: 'Combine creativity with tech — UI/UX design, game design, creative coding, or digital marketing.', actions: ['Learn Figma or a creative tool', 'Take a UX design course', 'Build a project to show employers'] }
-    // ]
+    paths: [
+      { title: 'Creative Professional', icon: '✏️', desc: 'Writer, designer, filmmaker, photographer, animator — build a career around your medium.', actions: ['Build a portfolio', 'Pick one medium to master', 'Find a community of creators'] },
+      { title: 'Creative Entrepreneur', icon: '🏗️', desc: 'Start a creative business — brand studio, content agency, or a product powered by your aesthetic.', actions: ['Validate a creative service', 'Land first 3 clients', 'Build your brand online'] },
+      { title: 'Creative Technologist', icon: '💻', desc: 'Combine creativity with tech — UI/UX design, game design, creative coding, or digital marketing.', actions: ['Learn Figma or a creative tool', 'Take a UX design course', 'Build a project to show employers'] }
+    ]
   },
   {
     id: 'intellectual',
@@ -184,11 +184,11 @@ const profiles = [
     summary: 'You\'re energised by learning, complexity, and making sense of the world. You read widely, think rigorously, and have little patience for shallow answers. Your power is your mind — and the paths that let you use it fully will feel like breathing.',
     strengths: ['Deep analytical and research ability', 'Highly knowledgeable and well-read', 'Excellent at breaking down complex problems', 'Can explain difficult things clearly'],
     weaknesses: ['Overthinking can lead to inaction', 'Can underestimate emotional/people dimensions', 'May be impatient with "simple" thinking', 'Analysis paralysis is a real risk'],
-    // paths: [
-    //   { title: 'Expert / Specialist', icon: '🔬', desc: 'Go deep in a field — science, law, economics, psychology, engineering, medicine, data science, philosophy.', actions: ['Identify your deepest interest', 'Pursue advanced study or certification', 'Write or speak about your expertise'] },
-    //   { title: 'Researcher / Analyst', icon: '📊', desc: 'Research roles in academia, think tanks, consulting firms, or data-heavy industries.', actions: ['Identify organisations doing research you respect', 'Build analytical skills (data, writing, methods)', 'Publish or present your thinking publicly'] },
-    //   { title: 'Strategist / Consultant', icon: '♟️', desc: 'Use your analytical mind to help organisations solve complex problems.', actions: ['Learn a consulting framework', 'Practice case studies', 'Build a reputation for clear thinking'] }
-    // ]
+    paths: [
+      { title: 'Expert / Specialist', icon: '🔬', desc: 'Go deep in a field — science, law, economics, psychology, engineering, medicine, data science, philosophy.', actions: ['Identify your deepest interest', 'Pursue advanced study or certification', 'Write or speak about your expertise'] },
+      { title: 'Researcher / Analyst', icon: '📊', desc: 'Research roles in academia, think tanks, consulting firms, or data-heavy industries.', actions: ['Identify organisations doing research you respect', 'Build analytical skills (data, writing, methods)', 'Publish or present your thinking publicly'] },
+      { title: 'Strategist / Consultant', icon: '♟️', desc: 'Use your analytical mind to help organisations solve complex problems.', actions: ['Learn a consulting framework', 'Practice case studies', 'Build a reputation for clear thinking'] }
+    ]
   },
   {
     id: 'helper',
@@ -199,11 +199,11 @@ const profiles = [
     summary: 'Your strength is people. You\'re a natural listener, an empathetic presence, and someone who genuinely wants others to thrive. You feel most alive when your work makes a tangible difference in someone\'s life — not just a bottom line.',
     strengths: ['Exceptional empathy and emotional awareness', 'Natural communicator and listener', 'Builds deep trust quickly', 'Motivated by meaning, not just money'],
     weaknesses: ['Can absorb others\' problems and burn out', 'Struggles to say no or set boundaries', 'May undervalue your own needs', 'Can be taken advantage of'],
-    // paths: [
-    //   { title: 'People-Facing Professional', icon: '👥', desc: 'Teaching, counselling, coaching, nursing, social work, therapy, HR, community management.', actions: ['Get certified in your area of care', 'Volunteer to build experience and clarity', 'Set boundaries early — this is career longevity'] },
-    //   { title: 'Healthcare or Mental Health', icon: '🏥', desc: 'Medicine, psychology, therapy, physiotherapy, nutrition — helping people at their most vulnerable.', actions: ['Map the qualifications needed', 'Shadow someone in the field first', 'Explore both clinical and non-clinical options'] },
-    //   { title: 'Mission-Driven Business or NGO', icon: '🌱', desc: 'Work in organisations where impact is the core metric — nonprofits, social enterprises, education reform.', actions: ['Identify causes you care about most', 'Look for organisations in those spaces', 'Find the role at the intersection of your skills and their need'] }
-    // ]
+    paths: [
+      { title: 'People-Facing Professional', icon: '👥', desc: 'Teaching, counselling, coaching, nursing, social work, therapy, HR, community management.', actions: ['Get certified in your area of care', 'Volunteer to build experience and clarity', 'Set boundaries early — this is career longevity'] },
+      { title: 'Healthcare or Mental Health', icon: '🏥', desc: 'Medicine, psychology, therapy, physiotherapy, nutrition — helping people at their most vulnerable.', actions: ['Map the qualifications needed', 'Shadow someone in the field first', 'Explore both clinical and non-clinical options'] },
+      { title: 'Mission-Driven Business or NGO', icon: '🌱', desc: 'Work in organisations where impact is the core metric — nonprofits, social enterprises, education reform.', actions: ['Identify causes you care about most', 'Look for organisations in those spaces', 'Find the role at the intersection of your skills and their need'] }
+    ]
   },
   {
     id: 'leader',
@@ -214,11 +214,11 @@ const profiles = [
     summary: 'You\'re energised by influence, direction, and results. People follow you naturally because you bring clarity in chaos. You\'re at your best when you\'re owning a vision, making decisions, and driving a team or organisation toward something meaningful.',
     strengths: ['Natural ability to organise and motivate others', 'Clear decisiveness under pressure', 'Big picture thinker who can delegate', 'High drive and execution energy'],
     weaknesses: ['Can steamroll others\' input if not careful', 'Impatience with slow or "soft" progress', 'Risk of burnout from always being "on"', 'Delegating — and truly letting go — is hard'],
-    // paths: [
-    //   { title: 'Entrepreneur / Founder', icon: '🚀', desc: 'Build and lead something of your own. Leadership is your mode — ownership multiplies it.', actions: ['Identify a real problem you want to solve', 'Find a co-founder who complements your gaps', 'Launch something small and learn fast'] },
-    //   { title: 'Manager / Executive Track', icon: '🏢', desc: 'Rise in a company that rewards leadership — corporate, government, NGO, military, education.', actions: ['Seek leadership roles early, even informal ones', 'Find a mentor who is where you want to be', 'Read widely on leadership and organisational design'] },
-    //   { title: 'Community / Movement Builder', icon: '📣', desc: 'Build something around a cause, interest, or community — politics, activism, religion, sports.', actions: ['Start small — run a local event or online group', 'Build skills in public speaking and writing', 'Define what you actually stand for'] }
-    // ]
+    paths: [
+      { title: 'Entrepreneur / Founder', icon: '🚀', desc: 'Build and lead something of your own. Leadership is your mode — ownership multiplies it.', actions: ['Identify a real problem you want to solve', 'Find a co-founder who complements your gaps', 'Launch something small and learn fast'] },
+      { title: 'Manager / Executive Track', icon: '🏢', desc: 'Rise in a company that rewards leadership — corporate, government, NGO, military, education.', actions: ['Seek leadership roles early, even informal ones', 'Find a mentor who is where you want to be', 'Read widely on leadership and organisational design'] },
+      { title: 'Community / Movement Builder', icon: '📣', desc: 'Build something around a cause, interest, or community — politics, activism, religion, sports.', actions: ['Start small — run a local event or online group', 'Build skills in public speaking and writing', 'Define what you actually stand for'] }
+    ]
   },
   {
     id: 'builder',
@@ -229,11 +229,11 @@ const profiles = [
     summary: 'You\'re wired for execution. While others theorise, you build. You\'re happiest when your hands (or mind) are on something real — writing code, fixing systems, making products, constructing things. You measure success by what exists that didn\'t exist before.',
     strengths: ['High execution ability — you finish what you start', 'Strong technical aptitude and problem-solving', 'Practical, resourceful, and self-reliant', 'Great at learning on the job'],
     weaknesses: ['May under-communicate your work to others', 'Can get lost in the details and miss the big picture', 'Networking and self-promotion don\'t come naturally', 'May undervalue the "soft" skills needed to advance'],
-    // paths: [
-    //   { title: 'Technical / Engineering Career', icon: '⚙️', desc: 'Software engineering, electrical, mechanical, civil, data — any field where you build real things.', actions: ['Pick a technical domain to go deep in', 'Build projects that show real skill', 'Find mentors in your chosen field'] },
-    //   { title: 'Product Development / Startup', icon: '📦', desc: 'Use your builder instinct to create products — digital or physical — that solve real problems.', actions: ['Identify a problem that frustrates you', 'Build a simple version (MVP)', 'Get 10 people to use it and listen carefully'] },
-    //   { title: 'Skilled Trade or Craft', icon: '🛠️', desc: 'Architecture, construction, culinary arts, mechanics, carpentry — mastery through making.', actions: ['Invest in proper training or apprenticeship', 'Build a body of work to show', 'Charge what your skill is worth'] }
-    // ]
+    paths: [
+      { title: 'Technical / Engineering Career', icon: '⚙️', desc: 'Software engineering, electrical, mechanical, civil, data — any field where you build real things.', actions: ['Pick a technical domain to go deep in', 'Build projects that show real skill', 'Find mentors in your chosen field'] },
+      { title: 'Product Development / Startup', icon: '📦', desc: 'Use your builder instinct to create products — digital or physical — that solve real problems.', actions: ['Identify a problem that frustrates you', 'Build a simple version (MVP)', 'Get 10 people to use it and listen carefully'] },
+      { title: 'Skilled Trade or Craft', icon: '🛠️', desc: 'Architecture, construction, culinary arts, mechanics, carpentry — mastery through making.', actions: ['Invest in proper training or apprenticeship', 'Build a body of work to show', 'Charge what your skill is worth'] }
+    ]
   },
   {
     id: 'organiser',
@@ -244,10 +244,10 @@ const profiles = [
     summary: 'You\'re the backbone of every team you join. You see inefficiency and it bothers you. You\'re excellent at planning, coordinating, and making sure things actually happen. The world massively undervalues people like you — but the best organisations don\'t.',
     strengths: ['Exceptional at planning and systems thinking', 'Reliable, thorough, and detail-oriented', 'Calm under pressure and logistically sharp', 'Can manage multiple things at once without dropping any'],
     weaknesses: ['Can be resistant to sudden change or ambiguity', 'May undervalue creative or "soft" contributions', 'Risk of micromanaging or being too rigid', 'Can struggle to delegate — feels faster to do it yourself'],
-    // paths: [
-    //   { title: 'Operations & Management', icon: '📋', desc: 'Project management, operations director, COO track — organisations need people who make the trains run on time.', actions: ['Get a PMP or operations certification', 'Seek roles managing complex projects', 'Learn to communicate upward clearly'] },
-    //   { title: 'Finance, Logistics, or Administration', icon: '📈', desc: 'Accounting, supply chain, event management, administration — precision-critical fields.', actions: ['Identify which industry appeals to you', 'Get sector-specific qualifications', 'Start in a support role and demonstrate reliability fast'] },
-    //   { title: 'Entrepreneur (Operational)', icon: '🏗️', desc: 'Build a service business that runs on excellent processes — an agency, consultancy, or franchise.', actions: ['Design your processes before your product', 'Find a creative co-founder who needs your structure', 'Start with what you already know how to do'] }
-    // ]
+    paths: [
+      { title: 'Operations & Management', icon: '📋', desc: 'Project management, operations director, COO track — organisations need people who make the trains run on time.', actions: ['Get a PMP or operations certification', 'Seek roles managing complex projects', 'Learn to communicate upward clearly'] },
+      { title: 'Finance, Logistics, or Administration', icon: '📈', desc: 'Accounting, supply chain, event management, administration — precision-critical fields.', actions: ['Identify which industry appeals to you', 'Get sector-specific qualifications', 'Start in a support role and demonstrate reliability fast'] },
+      { title: 'Entrepreneur (Operational)', icon: '🏗️', desc: 'Build a service business that runs on excellent processes — an agency, consultancy, or franchise.', actions: ['Design your processes before your product', 'Find a creative co-founder who needs your structure', 'Start with what you already know how to do'] }
+    ]
   }
 ];

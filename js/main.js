@@ -136,20 +136,20 @@ function showResults() {
       </div>`;
   }).join('');
 
-  // Top 3 paths (from top + second profile)
-  // const pathCards = [
-  //   ...top.paths.map((p, i) => ({ ...p, rank: i + 1, fromProfile: top })),
-  //   ...second.paths.slice(0, 1).map(p => ({ ...p, rank: 4, fromProfile: second }))
-  // ].map(p => `
-  //   <div class="path-card ${p.rank === 1 ? 'rank-1' : ''}">
-  //     <div class="path-rank">${p.rank === 1 ? '★' : '#' + p.rank}</div>
-  //     <div class="path-top">
-  //       <div class="path-icon-wrap">${p.icon}</div>
-  //       <div class="path-title">${p.title}</div>
-  //     </div>
-  //     <div class="path-desc">${p.desc}</div>
-  //     <div class="path-actions">${p.actions.map(a => `<span class="action-chip">${a}</span>`).join('')}</div>
-  //   </div>`).join('');
+  Top 3 paths (from top + second profile)
+  const pathCards = [
+    ...top.paths.map((p, i) => ({ ...p, rank: i + 1, fromProfile: top })),
+    ...second.paths.slice(0, 1).map(p => ({ ...p, rank: 4, fromProfile: second }))
+  ].map(p => `
+    <div class="path-card ${p.rank === 1 ? 'rank-1' : ''}">
+      <div class="path-rank">${p.rank === 1 ? '★' : '#' + p.rank}</div>
+      <div class="path-top">
+        <div class="path-icon-wrap">${p.icon}</div>
+        <div class="path-title">${p.title}</div>
+      </div>
+      <div class="path-desc">${p.desc}</div>
+      <div class="path-actions">${p.actions.map(a => `<span class="action-chip">${a}</span>`).join('')}</div>
+    </div>`).join('');
 
   resultsEl.innerHTML = `
     <div class="result-masthead">
