@@ -136,8 +136,8 @@ const profiles = [
     name: 'Community Cook',
     emoji: '🤝',
     color: '#2a7ac4',
-    tagline: 'Core skill: Enaggement',
-    summary: 'Core skill: Enaggement. You bring people together, spark connections, and make sure everyone has a seat at the table. Your superpower is building belonging and creating spaces where communities genuinely thrive. Congratulations! You are a Research Community Manager.',
+    tagline: 'Core skill: Engagement',
+    summary: 'Core skill: Engagement. You bring people together, spark connections, and make sure everyone has a seat at the table. Your superpower is building belonging and creating spaces where communities genuinely thrive. Congratulations! You are a Research Community Manager.',
     strengths: ['You create spaces where people genuinely belong and spark connections that wouldn\'t happen without you.'],
     weaknesses: ['Saying yes to everyone can stretch you too thin and tip you toward burnout before you notice it happening.'],
     paths: [
