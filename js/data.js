@@ -80,7 +80,7 @@ const questions = [
       { main: "You help them reframe the rant as a chance to identify bigger issues that other people might be facing to have broader structural discussion to identify a solution together", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
       { main: "You pull out your notebook and start capturing their concerns as potential action items, and come back next day with a plan for how this will solved", sub: "Systems, schedules, results", cats: { leader: 1 } },
       { main: "You're already mid-rant with them, tabs open, links flying, and a GitHub issue drafted", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      // { main: "Ugh, same!", cats: { organiser: 1 } }
+      { main: "Move face up and down in agreement", sub: "Systems, schedules, results", cats: { organiser: 1 } }
     ]
   },
   {
@@ -92,7 +92,7 @@ const questions = [
       { main: "By identifying the key decision-makers and figuring out overlaps between their interests", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
       { main: "By clarifying roles, responsibilities, and who owns which part of the solution", sub: "Systems, schedules, results", cats: { leader: 1 } },
       { main: "By mapping the technical dependencies and infrastructure constraints first, ensuring everyone understand what can or can not be done", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      // { main: "...", cats: { organiser: 1 } }
+      { main: "Listen for as long as people would love to be heard", sub: "Systems, schedules, results", cats: { organiser: 1 } }
     ]
   },
   // {
