@@ -194,9 +194,9 @@ const profiles = [
   {
     id: 'organiser',
     name: 'Community Members',
-    emoji: '',
+    emoji: '💻',
     color: '#c4532a',
-    tagline: '',
+    tagline: 'Yay',
     summary: 'Yay!!! You belong to a community!',
     strengths: ['You are part of a community where your presence, perspective and ideas matter if you don\'t know it how.'],
     weaknesses: ['Watch out that you don\'t alway take the back seat and let others solve the problem always. Use spaces to advocate for yourself and know that you too can become part of the solution.'],
