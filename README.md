@@ -1,56 +1,71 @@
-# Template for setting up RCM Cooperative partner repositories
+# What type of community supporter are you
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## About this Repository
-
-This repository builds on the template created and maintained by *The Turing Way* team members and shared under CC-BY 4.0 for reuse: https://github.com/alan-turing-institute/reproducible-project-template.
-
-When reusing this repository, update the information below with information about the intended partnership.
-
-Note after templating this directory, you may wish to create an additional directory called `private`. 
-Use this directory to enable files to be stored locally without being included in the main repo (this directory is excluded by the [.gitignore](~/.gitignore)). 
-This is useful where there are restrictions on sharing some information (GDPR) or license terms are yet to be agreed. 
+This repository houses the code, persona logic, and documentation for the **Community Supporter Type Quiz**, a project developed during the **[CW26 Hack Day 2026](https://www.software.ac.uk/workshop/collaborations-workshop-2026-cw26)**.
 
 ## Vision and Mission
-See materials from [Community Pulse](https://www.communitypulse.io/50-metrics-kpis-and-okrs/) for more guidance on developing the vision and mission.
 
-- **Vision:** A short phrase describing the future you are ultimately working towards (your final destination or desired end state).
-- **Mission:** A one-sentence statement describing the reason your organization or program exists (what you do + who/what you do this for).
+- **Vision:** A research culture where the "invisible labor" of community support is recognized as a professional skill set, allowing individuals to navigate their careers with confidence and a clear identity.
+- **Mission:** To provide an interactive, framework-aligned quiz that helps community contributors identify their community supporter "flavour," affirming their value and connecting them to a wider professional community.
 
 ## About
 
-Motivation and background in a nutshell.
+**Motivation:** Many people in research perform vital community-building tasks—maintaining GitHub READMEs, onboarding new members, or advocating for inclusion—without realizing these are formal Research Community Management (RCM) roles. This lack of naming makes the work invisible and hard to advocate for.
+
+**Background:** We have created a **Buzzfeed-style quiz** that maps daily behaviors to the **DIRECT Framework** and **CSCCE Skills Wheel**. Instead of a dry corporate assessment, we use a "Cooking and Hosting" metaphor to assign users a persona (e.g., *The Recipe Gatherer* or *The Global Cook*) and provide a **Spider Chart** visualization of their unique skill balance.
 
 ## Roadmap & Milestones
 
-- **Goals:** Clear overview of overarching and short-term goals.
-- **Outcomes:** Description of expected results and deliverables.
+- **Goals:**
+    - Finalize a 10-question weighting system mapped to RCM behaviors.
+    - Implement a web-based technical prototype with real-time results.
+    - Create reusable templates for other communities to fork and "re-vibe" the quiz.
+- **Outcomes:**
+    - A functional quiz hosted via GitHub Pages.
+    - A set of "Persona Badges" for use on social media and lanyards.
+    - Documentation covering the logic-to-framework mapping.
 
 ## The Team
 
-- **Members:** List of team members and their roles in the project.
-- **Roles & Responsibilities:** [Team Directory](link-to-directory) outlines roles, responsibilities and their ways of working.
-
 ## Contributing
 
-- **Guidelines:** [Contribution Guidelines](link-to-guidelines) for contributors.
-- **Code of Conduct:** [Code of Conduct](link-to-coc) ensures a respectful project environment.
-- **Resource Plans:** Details on available resources and recommended practices for the project team.
+- **Guidelines:** We welcome contributions! Whether it's a new persona "metaphor" (like Gardening or D&D), technical bug fixes, or better quiz questions, see [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Code of Conduct:** We adhere to the [RCM Cooperative Code of Conduct](CODE_OF_CONDUCT.md) to ensure a respectful and inclusive environment.
 
 ## Licensing
 
-This project is licensed under the CC-BY-4.0 License - see the LICENSE.md file for details.
+This project is licensed under the **CC-BY-4.0** License (for content/personas) and the **MIT License** (for the quiz source code) - see the LICENSE.md file for details.
 
 ## Citing & Acknowledgement
 
-- **Citation Instructions:** How to cite the project.
-- **Acknowledgment:** Recognising contributions by different members.
+- **Citation Instructions:** Please cite this project as: *RCM Cooperative (2026). Community Supporter Type Quiz. GitHub: https://github.com/rcmcooperative/community-supporter-type*
+- **Acknowledgment:** This project was inspired by the **CSCCE Skills Wheel** and the **DIRECT Framework**. Special thanks to the SSI Hack Day 2026 organizers.
 
 ## Contact
 
-- **Reach Out:** Contact details for questions, feedback, or ideas.
+- **Reach Out:** Join the CW26 Slack channel **#community-supporter-hacking** or open an issue on our GitHub repository.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+---
+
+
+
 
 
 
@@ -75,17 +90,4 @@ This project is licensed under the CC-BY-4.0 License - see the LICENSE.md file f
 - [ ] Add badges
 
 
-## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
