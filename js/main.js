@@ -6,6 +6,7 @@ let answers = {};
 function startQuiz() {
   document.getElementById('intro').classList.add('hidden');
   document.getElementById('quiz').style.display = 'block';
+  document.getElementById('qcount').textContent = questions.length;
   renderQ();
 }
 
