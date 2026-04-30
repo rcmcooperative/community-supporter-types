@@ -196,7 +196,7 @@ const profiles = [
     name: 'Community Members',
     emoji: '',
     color: '#c4532a',
-    tagline: '',
+    tagline: 'Yay!',
     summary: 'Yay!!! You belong to a community!',
     strengths: ['Exceptional at planning and systems thinking', 'Reliable, thorough, and detail-oriented', 'Calm under pressure and logistically sharp', 'Can manage multiple things at once without dropping any'],
     weaknesses: ['Can be resistant to sudden change or ambiguity', 'May undervalue creative or "soft" contributions', 'Risk of micromanaging or being too rigid', 'Can struggle to delegate — feels faster to do it yourself'],
