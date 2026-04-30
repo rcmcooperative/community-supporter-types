@@ -19,9 +19,10 @@ This repository houses the code, persona logic, and documentation for the **Comm
 ## Roadmap & Milestones
 
 - **Goals:**
-    - Finalize a 10-question weighting system mapped to RCM behaviors.
-    - Implement a web-based technical prototype with real-time results.
-    - Create reusable templates for other communities to fork and "re-vibe" the quiz.
+    - [x] Develop community supporter personas based on the RCM Skills Wheel
+    - [x] Finalize a 10-question system which maps to RCM behaviors.
+    - [x] Implement a web-based technical prototype with real-time results.
+    
 - **Outcomes:**
     - A functional quiz hosted via GitHub Pages.
     - A set of "Persona Badges" for use on social media and lanyards.
