@@ -1,4 +1,4 @@
-# What type of community supporter are you
+# What type of community supporter are you?
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -22,7 +22,7 @@ This repository houses the code, persona logic, and documentation for the **Comm
     - [x] Develop community supporter personas based on the RCM Skills Wheel
     - [x] Finalize a 10-question system which maps to RCM behaviors.
     - [x] Implement a web-based technical prototype with real-time results.
-    
+
 - **Outcomes:**
     - A functional quiz hosted via GitHub Pages.
     - A set of "Persona Badges" for use on social media and lanyards.
