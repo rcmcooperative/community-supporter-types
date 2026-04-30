@@ -1,6 +1,6 @@
 # Template for setting up RCM Cooperative partner repositories
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## About this Repository
@@ -86,6 +86,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cassgvp"><img src="https://avatars.githubusercontent.com/u/43407869?v=4?s=100" width="100px;" alt="Cassandra Gould van Praag"/><br /><sub><b>Cassandra Gould van Praag</b></sub></a><br /><a href="#doc-cassgvp" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/amangoel185"><img src="https://avatars.githubusercontent.com/u/10528392?v=4?s=100" width="100px;" alt="Aman Goel"/><br /><sub><b>Aman Goel</b></sub></a><br /><a href="#doc-amangoel185" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/eleanor-broadway"><img src="https://avatars.githubusercontent.com/u/52749246?v=4?s=100" width="100px;" alt="eleanor-broadway"/><br /><sub><b>eleanor-broadway</b></sub></a><br /><a href="#doc-eleanor-broadway" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://erambler.co.uk/"><img src="https://avatars.githubusercontent.com/u/457628?v=4?s=100" width="100px;" alt="Jez Cope"/><br /><sub><b>Jez Cope</b></sub></a><br /><a href="#doc-jezcope" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
