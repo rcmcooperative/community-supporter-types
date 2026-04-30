@@ -34,7 +34,6 @@ function renderQ() {
       <span class="opt-letter">${letters[i]}</span>
       <div class="opt-body">
         <div class="opt-main">${opt.main}</div>
-        <div class="opt-sub">${opt.sub}</div>
       </div>`;
     btn.onclick = () => pick(i);
     list.appendChild(btn);
