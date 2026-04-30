@@ -136,7 +136,7 @@ function showResults() {
       </div>`;
   }).join('');
 
-  Top 3 paths (from top + second profile)
+//  Top 3 paths (from top + second profile)
   const pathCards = [
     ...top.paths.map((p, i) => ({ ...p, rank: i + 1, fromProfile: top })),
     ...second.paths.slice(0, 1).map(p => ({ ...p, rank: 4, fromProfile: second }))
