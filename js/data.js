@@ -138,7 +138,7 @@ const profiles = [
     color: '#2a7ac4',
     tagline: 'Core skill: Enaggement',
     summary: 'You bring people together, spark connections, and make sure everyone has a seat at the table. Your superpower is building belonging and creating spaces where communities genuinely thrive. Congratulations! You are a Research Community Manager.',
-    strengths: ['You create spaces where people genuinely belong and spark connections that wouldn't happen without you.'],
+    strengths: ['You create spaces where people genuinely belong and spark connections that wouldn\'t happen without you.'],
     weaknesses: ['Saying yes to everyone can stretch you too thin and tip you toward burnout before you notice it happening.'],
     paths: [
       { title: 'Expert / Specialist', icon: '🔬', desc: 'Go deep in a field — science, law, economics, psychology, engineering, medicine, data science, philosophy.', actions: ['Identify your deepest interest', 'Pursue advanced study or certification', 'Write or speak about your expertise'] },
@@ -198,7 +198,7 @@ const profiles = [
     color: '#c4532a',
     tagline: '',
     summary: 'Yay!!! You belong to a community!',
-    strengths: ['You are part of a community where your presence, perspective and ideas matter if you don't know it how.'],
+    strengths: ['You are part of a community where your presence, perspective and ideas matter if you don\'t know it how.'],
     weaknesses: ['Watch out that you don\'t alway take the back seat and let others solve the probelm always. Use spaces to advocate for yourself and know that you too can become part of the solution.'],
     paths: [
       { title: 'Operations & Management', icon: '📋', desc: 'Project management, operations director, COO track — organisations need people who make the trains run on time.', actions: ['Get a PMP or operations certification', 'Seek roles managing complex projects', 'Learn to communicate upward clearly'] },
