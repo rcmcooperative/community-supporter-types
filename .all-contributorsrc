@@ -27,6 +27,15 @@
       ]
     },
     {
+      "login": "vmaraneta",
+      "name": "Anica Araneta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211810747?v=4",
+      "profile": "https://github.com/vmaraneta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
       "login": "eleanor-broadway",
       "name": "eleanor-broadway",
       "avatar_url": "https://avatars.githubusercontent.com/u/52749246?v=4",
@@ -40,6 +49,15 @@
       "name": "Hollie Rowland",
       "avatar_url": "https://avatars.githubusercontent.com/u/185346822?v=4",
       "profile": "https://github.com/hjrucl90",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jezcope",
+      "name": "Jez Cope",
+      "avatar_url": "https://avatars.githubusercontent.com/u/457628?v=4",
+      "profile": "https://erambler.co.uk/",
       "contributions": [
         "doc"
       ]
