@@ -1,0 +1,16 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2869
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26\fsmilli13333 \cf0 \expnd0\expndtw0\kerning0
+#Personas\
+1. Influencer cook (Communication)\
+2. Community cook (Engagement)\
+3. Head Chef (Strategic)\
+4. Hostess with the Mostest (Accountability)\
+5. Nerd Cook (Technical)\
+6. Foodie (Participant)}
