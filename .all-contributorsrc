@@ -1,4 +1,76 @@
 {
   "projectName": "community-supporter-types",
-  "projectOwner": "rcmcooperative"
+  "projectOwner": "rcmcooperative",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "cassgvp",
+      "name": "Cassandra Gould van Praag",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43407869?v=4",
+      "profile": "https://github.com/cassgvp",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "amangoel185",
+      "name": "Aman Goel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10528392?v=4",
+      "profile": "https://github.com/amangoel185",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vmaraneta",
+      "name": "Anica Araneta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/211810747?v=4",
+      "profile": "https://github.com/vmaraneta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "eleanor-broadway",
+      "name": "eleanor-broadway",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52749246?v=4",
+      "profile": "https://github.com/eleanor-broadway",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hjrucl90",
+      "name": "Hollie Rowland",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185346822?v=4",
+      "profile": "https://github.com/hjrucl90",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jezcope",
+      "name": "Jez Cope",
+      "avatar_url": "https://avatars.githubusercontent.com/u/457628?v=4",
+      "profile": "https://erambler.co.uk/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "malvikasharan",
+      "name": "Malvika Sharan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5370471?v=4",
+      "profile": "http://malvikasharan.github.io/",
+      "contributions": [
+        "doc",
+        "content"
+      ]
+    }
+  ]
 }
