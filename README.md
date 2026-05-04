@@ -3,7 +3,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-This repository houses the code, persona logic, and documentation for the **Community Supporter Type Quiz**, a project developed during the **[CW26 Hack Day 2026](https://www.software.ac.uk/workshop/collaborations-workshop-2026-cw26)**.
+This repository houses the code, persona logic, and documentation for the **Community Supporter Type Quiz** for self-assessment/identification, a project developed during the **[CW26 Hack Day 2026](https://www.software.ac.uk/workshop/collaborations-workshop-2026-cw26)**.
 
 ## Vision and Mission
 
@@ -14,7 +14,9 @@ This repository houses the code, persona logic, and documentation for the **Comm
 
 **Motivation:** Many people in research perform vital community-building tasks—maintaining GitHub READMEs, onboarding new members, or advocating for inclusion—without realizing these are formal Research Community Management (RCM) roles. This lack of naming makes the work invisible and hard to advocate for.
 
-**Background:** We have created a **Buzzfeed-style quiz** that maps daily behaviors to the **DIRECT Framework** and **CSCCE Skills Wheel**. Instead of a dry corporate assessment, we use a "Cooking and Hosting" metaphor to assign users a persona (e.g., *The Recipe Gatherer* or *The Global Cook*) and provide a **Spider Chart** visualization of their unique skill balance.
+**Background:** We have created a short quiz that maps behaviors to the Research Community Management Skills and Competency Framework (Sharan et. al. 2025, Arxiv). Here we use a more accessible "Cooking and Hosting" metaphor to assign users a persona (e.g., *The Recipe Gatherer* or *The Global Cook* based on their community management skills) and provide a visual assessment of their unique skill balance aligning the DIRECT Framework visualization.
+
+See the docs folder for data and process used in this project.
 
 ## Roadmap & Milestones
 
