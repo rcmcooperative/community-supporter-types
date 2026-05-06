@@ -104,21 +104,31 @@ function showResults() {
   const second = ranked[1].profile;
   const max = Math.max(...ranked.map(r => r.val), 1);
 
-  // Strengths / weaknesses = top profile's
+  // Strengths / weaknesses / recommendation / best partner = top profile's
   const swHtml = `
     <div class="sw-grid">
       <div class="sw-card strengths">
-        <div class="sw-head">Your Strengths</div>
+        <div class="sw-head">Your Superpower 💪</div>
         ${top.strengths.map(s => `<div class="sw-item"><div class="sw-dot"></div><span>${s}</span></div>`).join('')}
       </div>
       <div class="sw-card weaknesses">
-        <div class="sw-head">Watch Out For</div>
+        <div class="sw-head">Watch out for 🔍</div>
         ${top.weaknesses.map(w => `<div class="sw-item"><div class="sw-dot"></div><span>${w}</span></div>`).join('')}
       </div>
-    </div>`;
+    </div>
+    ${top.recommendation ? `
+    <div class="sw-card recommendation">
+      <div class="sw-head">Level Up 🚀</div>
+      <div class="sw-item"><div class="sw-dot"></div><span>${top.recommendation}</span></div>
+    </div>` : ''}
+    ${top.bestPartner ? `
+    <div class="sw-card best-partner">
+      <div class="sw-head">Your Dream Collaborator 🤝</div>
+      <div class="sw-item"><span>${top.bestPartner}</span></div>
+    </div>` : ''}`;
 
   // Score bars
-  const barColors = { creative: '#c4532a', intellectual: '#2a7ac4', helper: '#2ac47a', leader: '#c49a2a', builder: '#8a4ac4', organiser: '#c4532a' };
+  const barColors = { creative: '#FF6B6B', intellectual: '#4ECDC4', helper: '#F7B731', leader: '#26de81', builder: '#A55EEA', organiser: '#c4532a' };
   const barHtml = ranked.map(({ profile, val }) => {
     const pct = Math.round((val / max) * 100);
     return `
