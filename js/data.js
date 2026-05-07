@@ -1,110 +1,108 @@
 const questions = [
   {
-    category: "Your Natural Energy",
-    text: "You're at a conference with your peers. Which of the following activities are you most likely doing?",
+    category: "Natural Energy",
+    text: "When you're at a conference with your peers, which of the following activities are you most likely doing?",
     options: [
       { main: "Live-posting highlights, writing threads, and making sure your followers don't miss a thing", cats: { creative: 1 } },
-      { main: "Playing matchmaker in the hallways — connecting people who absolutely need to know each other", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "Scoping trends, spotting opportunities, and working on the next steps for the community", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "Making sure everyone has the agenda, the Wi-Fi code, and knows where the good coffee is", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "Hunting down the speaker who mentioned reproducible workflows so you can geek out together", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Eating and relaxing", sub: "Systems, schedules, results", cats: { organiser: 1 } }
+      { main: "Playing matchmaker in the hallways — connecting people who absolutely need to know each other", cats: { intellectual: 1 } },
+      { main: "Quietly scoping trends, spotting white spaces, and mentally drafting the next big strategy", cats: { helper: 1 } },
+      { main: "Making sure everyone has the agenda, the Wi-Fi code, and knows where the good coffee is", cats: { leader: 1 } },
+      { main: "Hunting down the speaker who mentioned reproducible workflows so you can geek out together", cats: { builder : 1 } },
+      { main: "Chatting with people, sharing your experiences, and trying to find ways to contribute to the community", cats: { cooking_curious: 1 } },
+      { main: "Sipping conference coffee and taking selfie to post it with the event hashtag", cats: { participant: 1 } }
     ]
   },
   {
     category: "How You Think",
-    text: "You're at a meeting that feels disorganized. What role do you naturally assume?",
+    text: "When you're at a meeting that feels disorganized, what role do you naturally assume?",
     options: [
       { main: "You draft a crisp summary of what's been said so everyone's aligned on the same page", cats: { creative: 1 } },
-      { main: "You check in with quieter voices in the room to make sure everyone gets heard", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "You gently redirect the group toward goals and try to synthesise different ideas into a shared vision", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "You volunteer to capture action items and chase people up afterwards (cheerfully)", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "You start sketching a workflow diagram on a napkin to untangle the confusion", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Sit and watch the chaos unfold", cats: { organiser: 1 } }
+      { main: "You check in with quieter voices in the room to make sure everyone gets heard", cats: { intellectual: 1 } },
+      { main: "You gently redirect the group toward goals and what actually matters long-term", cats: { helper: 1 } },
+      { main: "You volunteer to capture action items and chase people up afterwards (cheerfully)", cats: { leader: 1 } },
+      { main: "You start sketching a workflow diagram on a napkin to untangle the confusion", cats: { builder : 1 } },
+      { main: "You ask questions and share your perspective, trying to find a way to contribute to the solution", cats: { cooking_curious: 1 } },
+      { main: "Sit back, relax and watch the chaos unfold, hoping someone will step in", cats: { participant: 1 } }
     ]
   },
   {
     category: "Work & Effort",
-    text: "Someone proposes a new project at your workplace. What are you are most likely to suggest?",
+    text: "When someone proposes a new project at your workplace, you are more likely to suggest...",
     options: [
       { main: "We need a comms plan! Let's think about the narrative and how we announce this to the world.", cats: { creative: 1 } },
-      { main: "Who are our stakeholders? Let's build an onboarding plan and get the community involved from day one.", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "What's the strategic fit? Let me do a quick horizon scan before we commit to anything.", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "Setting up a timeline, a risk register, and defining who owns what before we start.", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "Have we decided on the license, version control, and whether this will be open source?", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Jump in and have a go at it", cats: { organiser: 1 } }
+      { main: "Who are our stakeholders? Let's build an onboarding plan and get the community involved from day one.", cats: { intellectual: 1 } },
+      { main: "What's the strategic fit? Let me do a quick horizon scan before we commit to anything.", cats: { helper: 1 } },
+      { main: "Let's set up a timeline, a risk register, and define who owns what before we start.", cats: { leader: 1 } },
+      { main: "Have we decided on the license, version control, and whether this will be open source?", cats: { builder : 1 } },
+      { main: "How can I help? What are the next steps and how can I get involved?", cats: { cooking_curious: 1 } },
+      { main: "Can I help? Who else is involved and how can I get on board?", cats: { participant: 1 } }
     ]
   },
   {
-    category: "What Drains You",
-    text: "You are in a hackathon refreshment break. Someone says they are contributing to project 'Foo'. What is your first comment?",
+    category: "Engagement Style",
+    text: "You are in a conference refreshment break. Someone says that they are contributing to project \"Foo\". What is your first comment?",
     options: [
       { main: "I've seen your posts about it! Have you thought about a newsletter or blog series?", cats: { creative: 1 } },
-      { main: "Amazing! Who else is involved? How can other people get on board?", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "Interesting - how does it fit into the broader ecosystem? Have you thought about the long-term sustainability?", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "You can't resist asking about the roadmap. Any key milestones coming up soon?", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "Nice! What stack are you using? Is the code open source and the data FAIR?", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "That's a nice project", cats: { organiser: 1 } }
+      { main: "Amazing! Who else is involved? How can other people get on board?", cats: { intellectual: 1 } },
+      { main: "Interesting — how does it fit into the broader ecosystem? Any sustainability or funding plans?", cats: { helper: 1 } },
+      { main: "Great! What does the roadmap look like? Any key milestones coming up soon?", cats: { leader: 1 } },
+      { main: "Nice! What stack are you using? Is the code open source and the data FAIR?", cats: { builder : 1 } },
+      { main: "Cool! How did you get involved? What are you working on right now?", cats: { cooking_curious: 1 } },
+      { main: "That's a nice project! Curious to know how you got involved", cats: { participant: 1 } }
     ]
   },
   {
     category: "Your Values",
-    text: "You are part of an event organizing group. What role are you most likely to take?",
+    text: "When you are part of an event organizing group, you are most likely to take one of the following roles",
     options: [
       { main: "Writing the event narrative, promotional copy, and keeping the social buzz alive", cats: { creative: 1 } },
-      { main: "Designing the programme to encourage participation and centre diverse voices", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "Ensuring the event with the community's goals and identifying partnership opportunities", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "Managing logistics, tracking the budget, and making sure nothing falls through the cracks", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "Setting up the tech - platform, recording, accessibility tools, and shared notes", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Purchase the ticket and attend the event", cats: { organiser: 1 } }
+      { main: "Designing the programme to encourage participation and centre diverse voices", cats: { intellectual: 1 } },
+      { main: "Aligning the event with organisational goals and identifying partnership opportunities", cats: { helper: 1 } },
+      { main: "Managing logistics, tracking the budget, and making sure nothing falls through the cracks", cats: { leader: 1 } },
+      { main: "Setting up the tech — platform, recording, accessibility tools, and shared notes", cats: { builder : 1 } },
+      { main: "Volunteering to help with whatever needs doing, and encouraging others to do the same", cats: { cooking_curious: 1 } },
+      { main: "Purchase the ticket to attend and looking for ways to contribute", cats: { participant: 1 } }
     ]
   },
   {
     category: "Social Style",
-    text: "You are doing a retrospective for a project. What do you most notice in your notes?",
+    text: "When you are doing a retrospective for a project, what do you most notice in your notes",
     options: [
       { main: "Whether key messages reached the right audiences — and what landed vs. what flopped", cats: { creative: 1 } },
-      { main: "How engaged the community felt, and whether everyone truly had a voice", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "They are focused on the big picture and look at how things connect with other communities", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "Whether timelines, budgets, and action items were actually tracked and closed out", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "Whether the code is reproducible, documented, and properly archived and hopefully published on GitHub/Zenodo for others to build on", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Retrospective? Huh! I wasn't even a part of that", cats: { organiser: 1 } }
+      { main: "How engaged the community felt, and whether everyone truly had a voice", cats: { intellectual: 1 } },
+      { main: "Whether the project moved the mission forward and what bold moves to make next time", cats: { helper: 1 } },
+      { main: "Whether timelines, budgets, and action items were actually tracked and closed out", cats: { leader: 1 } },
+      { main: "Whether the code is reproducible, documented, and properly archived for others to build on", cats: { builder : 1 } },
+      { main: "Whether people felt like they had a chance to contribute and whether they took it", cats: { cooking_curious: 1 } },
+      { main: "Retrospective? Huh! I wonder what happens in those meetings?", cats: { participant: 1 } }
     ]
   },
   {
     category: "Risk & Comfort",
-    text: "Your colleagues come to your office and rant about an infrastructure is not working efficiently. What is your reaction?",
+    text: "Your nerdy friends come to your office and rant about something, what is your reaction?",
     options: [
-      { main: "You listen, then suggest they find a solution together and channel it into a blog post or even better share it as a chapter in The Turing Way", cats: { creative: 1 } },
-      { main: "You empathise deeply, then ask who else feels this way and how to bring them together", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "You help them reframe the rant as a chance to identify bigger issues that other people might be facing to have broader structural discussion to identify a solution together", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "You pull out your notebook and start capturing their concerns as potential action items, and come back next day with a plan for how this will solved", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "You're already mid-rant with them, tabs open, links flying, and a GitHub issue drafted", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Move face up and down in agreement", sub: "Systems, schedules, results", cats: { organiser: 1 } }
+      { main: "You listen, then suggest they channel it into a blog post or a rallying tweet thread", cats: { creative: 1 } },
+      { main: "You empathise deeply, then ask who else feels this way and how to bring them together", cats: { intellectual: 1 } },
+      { main: "You help them reframe the rant as an opportunity and identify the key stakeholders to involve", cats: { helper: 1 } },
+      { main: "You pull out your notebook and start capturing their concerns as potential action items", cats: { leader: 1 } },
+      { main: "You're already mid-rant with them, tabs open, links flying, and a GitHub issue half-drafted", cats: { builder : 1 } },
+      { main: "Check if they need help troubleshooting, finding collaborators, or sharing their work?", cats: { cooking_curious: 1 } },
+      { main: "You listen and commiserate, sharing your own frustrations with the problem", cats: { participant: 1 } }
     ]
   },
   {
     category: "Learning Style",
-    text: "You're working in a group to solve a problem. Where do you start?",
+    text: "When you are interacting with multiple groups when solving a problem, where do you generally start?",
     options: [
       { main: "By crafting a shared message that resonates with every audience you need to reach", cats: { creative: 1 } },
-      { main: "By listening to each group first to understand how they relate to one another", sub: "Research, strategy, thinking through problems", cats: { intellectual: 1 } },
-      { main: "By identifying the key decision-makers and figuring out overlaps between their interests", sub: "Crafts, code, products, physical work", cats: { helper: 1 } },
-      { main: "By clarifying roles, responsibilities, and who owns which part of the solution", sub: "Systems, schedules, results", cats: { leader: 1 } },
-      { main: "By mapping the technical dependencies and infrastructure constraints first, ensuring everyone understand what can or can not be done", sub: "Systems, schedules, results", cats: { builder : 1 } },
-      { main: "Listen for as long as people would love to be heard", sub: "Systems, schedules, results", cats: { organiser: 1 } }
+      { main: "By listening to each group first to understand how they relate to one another", cats: { intellectual: 1 } },
+      { main: "By identifying the key decision-makers and aligning everyone on shared goals", cats: { helper: 1 } },
+      { main: "By clarifying roles, responsibilities, and who owns which part of the solution", cats: { leader: 1 } },
+      { main: "By mapping the technical dependencies and infrastructure constraints first", cats: { builder : 1 } },
+      { main: "By offering to help wherever needed and asking what would be most useful right now", cats: { cooking_curious: 1 } },
+      { main: "By listening and observing first before figuring out how or whether to get involved", cats: { participant: 1 } }
     ]
-  },
-  // {
-  //   category: "What You're Drawn To",
-  //   text: "Which section of a bookstore do you drift toward?",
-  //   options: [
-  //     { main: "Psychology, self-help, relationships", sub: "Human behaviour fascinates you", cats: { people: 2, helping: 2, intellectual: 2, emotional: 2 } },
-  //     { main: "Science, technology, history, philosophy", sub: "Big ideas and deep knowledge", cats: { intellectual: 3, analytical: 2, technical: 1 } },
-  //     { main: "Business, entrepreneurship, biographies", sub: "How people build things", cats: { entrepreneur: 3, leadership: 2, mastery: 1 } },
-  //     { main: "Art, design, fiction, poetry, culture", sub: "Aesthetics and expression", cats: { creative: 3, maker: 1 } }
-  //   ]
-  // }
+  }
 ];
 
 const phases = [
@@ -156,7 +154,7 @@ const profiles = [
     emoji: '🧠',
     color: '#F7B731',
     tagline: 'Core skill: Strategic',
-    summary: 'Core skill: Strategic. You see the big picture, align teams with vision, and spot opportunities others miss. Your superpower is turning ambiguity into direction and complexity into coherent strategy. Congratulations! You are a Research Community Manager.',
+    summary: 'Core skill: Strategic. You are helping to articulate the community\'s priorities, identify areas for growth or collaboration, and building collaborations with other communities. You advocate for your community to people outside of it and advocate for new leaders within it. Congratulations! You are a Research Community Manager.',
     strengths: ['You see the big picture before anyone else and align people around a vision that gives the community direction.'],
     weaknesses: ['Your high-altitude thinking can leave community members behind — execution and day-to-day needs can slip.'],
     recommendation: 'Stay grounded with regular direct touchpoints with your community and partner closely with someone who loves the detail.',
@@ -202,20 +200,37 @@ const profiles = [
     ]
   },
   {
-    id: 'organiser',
-    name: 'Community Members',
-    emoji: '💻',
-    color: '#c4532a',
-    tagline: 'Community Member',
-    summary: 'You belong to a community — and that matters! Your presence, perspective, and participation help shape what the community becomes.',
-    strengths: ['You are part of a community where your presence, perspective, and ideas matter, even if you don\'t know it yet.'],
-    weaknesses: ['Watch out that you don\'t always take the back seat and let others solve the problem. Use these spaces to advocate for yourself and know that you too can become part of the solution.'],
-    recommendation: 'Take one small step to get more involved — share an idea, join a working group, or introduce yourself to someone new.',
+    id: 'cooking_curious',
+    name: 'Cooking Curious',
+    emoji: '❤️',
+    color: '#FF85A1',
+    tagline: 'Core skill: Active Contributor',
+    summary: 'Core skill: Active Contributor. You are actively engaging with the community, sharing your experiences, and looking for ways to contribute. Your superpower is your willingness to jump in and get involved — you are the lifeblood of any community. Congratulations! You are a Research Community Member.',
+    strengths: ['You actively engage and contribute to the community, helping to drive its growth and vibrancy.'],
+    weaknesses: ['You may be navigating spaces and finding your voice to contribute and influence within the community.'],
+    recommendation: 'Seek out places to get onboarded in the community, seek mentorship and opportunities to take on visible roles within the community.',
     bestPartner: 'Community Cook 🤝',
     paths: [
-      { title: 'Operations & Management', icon: '📋', desc: 'Project management, operations director, COO track — organisations need people who make the trains run on time.', actions: ['Get a PMP or operations certification', 'Seek roles managing complex projects', 'Learn to communicate upward clearly'] },
-      { title: 'Finance, Logistics, or Administration', icon: '📈', desc: 'Accounting, supply chain, event management, administration — precision-critical fields.', actions: ['Identify which industry appeals to you', 'Get sector-specific qualifications', 'Start in a support role and demonstrate reliability fast'] },
-      { title: 'Entrepreneur (Operational)', icon: '🏗️', desc: 'Build a service business that runs on excellent processes — an agency, consultancy, or franchise.', actions: ['Design your processes before your product', 'Find a creative co-founder who needs your structure', 'Start with what you already know how to do'] }
+      { title: 'Community Contributor', icon: '🤝', desc: 'Deepen your involvement — take on visible roles, mentor others, and help shape community direction.', actions: ['Volunteer for a working group', 'Share your expertise in a workshop or blog post', 'Find a mentor in the community'] },
+      { title: 'Community Organiser', icon: '📣', desc: 'Move from contributing to organising — plan events, coordinate groups, and help others find their way in.', actions: ['Propose and lead a community event', 'Create onboarding resources for newcomers', 'Build connections between different community groups'] },
+      { title: 'Open Source Contributor', icon: '💻', desc: 'Bring your active energy to open source projects that align with your interests and expertise.', actions: ['Find a project that matches your skills', 'Start with small contributions', 'Connect with project maintainers'] }
+    ]
+  },
+  {
+    id: 'participant',
+    name: 'not sure where to get started',
+    emoji: '🤷🏽‍♂️',
+    color: '#94a3b8',
+    tagline: 'Core skill: Participant',
+    summary: 'Core skill: Participant. You aren\'t sure where to start and hopefully interested in getting involved. You may be new to the field or just haven\'t found the right entry point yet. Your superpower is your new ideas and openness to learning — you have the potential to become a valuable contributor to the community. Congratulations! You are a Research Community Member.',
+    strengths: ['You have the potential to become a valuable contributor to the community with your new ideas and openness to learning.'],
+    weaknesses: ['You may feel overwhelmed by the many ways to get involved and unsure of where to start.'],
+    recommendation: 'Start by listening and learning from the community — attend events, join discussions, and look for opportunities to contribute in small ways.',
+    bestPartner: 'Cooking Curious ❤️',
+    paths: [
+      { title: 'Attend & Listen', icon: '👂', desc: 'Start as a participant — attend events, join discussions, and find ways to contribute in small ways.', actions: ['Attend a community event', 'Introduce yourself to someone new', 'Look for beginner-friendly contribution opportunities'] },
+      { title: 'Find Your Entry Point', icon: '🚪', desc: 'Explore different areas of the community to discover where your interests and skills fit best.', actions: ['Try different types of community activities', 'Ask a community member how they got started', 'Identify one area you want to learn more about'] },
+      { title: 'Build Your Network', icon: '🌐', desc: 'Connect with others who share your interests and can help guide you into deeper involvement.', actions: ['Join online community spaces', 'Follow community members doing work you admire', 'Share something small — a question, a resource, an idea'] }
     ]
   }
 ];

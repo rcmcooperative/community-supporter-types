@@ -65,15 +65,15 @@ function goBack() {
 
 // ── SCORING ──────────────────────────────────────────────────────────
 function score() {
-  const s = { creative: 0, intellectual: 0, helper: 0, leader: 0, builder: 0, organiser: 0 };
+  const s = { creative: 0, intellectual: 0, helper: 0, leader: 0, builder: 0, cooking_curious: 0, participant: 0 };
   const mapping = {
     creative: 'creative', intellectual: 'intellectual', people: 'helper',
     helping: 'helper', emotional: 'helper', leadership: 'leader', entrepreneur: 'leader',
-    maker: 'builder', technical: 'builder', organiser: 'organiser', structured: 'organiser',
+    maker: 'builder', technical: 'builder', cooking_curious: 'cooking_curious', participant: 'participant',
     analytical: 'intellectual', mastery: 'intellectual', meaning: 'helper',
     autonomy_need: 'leader', introvert: 'intellectual', extrovert: 'helper',
     creative_need: 'creative', intellectual_need: 'intellectual', maker_need: 'builder',
-    structure_need: 'organiser'
+    structure_need: 'leader'
   };
 
   questions.forEach((q, qi) => {
@@ -95,7 +95,7 @@ function showResults() {
   resultsEl.classList.add('active');
 
   const s = score();
-  const profMap = { creative: 0, intellectual: 1, helper: 2, leader: 3, builder: 4, organiser: 5 };
+  const profMap = { creative: 0, intellectual: 1, helper: 2, leader: 3, builder: 4, cooking_curious: 5, participant: 6 };
   const ranked = Object.entries(s)
     .map(([id, val]) => ({ profile: profiles[profMap[id]], val }))
     .sort((a, b) => b.val - a.val);
@@ -128,7 +128,7 @@ function showResults() {
     </div>` : ''}`;
 
   // Score bars
-  const barColors = { creative: '#FF6B6B', intellectual: '#4ECDC4', helper: '#F7B731', leader: '#26de81', builder: '#A55EEA', organiser: '#c4532a' };
+  const barColors = { creative: '#FF6B6B', intellectual: '#4ECDC4', helper: '#F7B731', leader: '#26de81', builder: '#A55EEA', cooking_curious: '#FF85A1', participant: '#94a3b8' };
   const barHtml = ranked.map(({ profile, val }) => {
     const pct = Math.round((val / max) * 100);
     return `
